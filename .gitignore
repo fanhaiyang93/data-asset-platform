@@ -60,3 +60,5 @@ Thumbs.db
 
 # test reports
 测试报告*.md
+
+/doc

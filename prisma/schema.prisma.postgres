@@ -1,0 +1,617 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 用户角色枚举
+enum UserRole {
+  BUSINESS_USER    // 业务用户 - 只读资产和创建申请
+  ASSET_MANAGER    // 资产管理员 - 管理资产和审核申请
+  SYSTEM_ADMIN     // 系统管理员 - 全部权限
+}
+
+model User {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  email        String   @unique
+  passwordHash String   // BCrypt加密的密码hash
+  name         String?  // 用户真实姓名
+  department   String?  // 用户部门
+  role         UserRole @default(BUSINESS_USER) // 用户角色
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  lastLoginAt  DateTime? // 上次登录时间
+
+  // SSO相关字段
+  ssoProvider  String?  // SSO提供商 (saml, oauth, ldap)
+  ssoId        String?  // SSO用户唯一标识
+
+  // 用户会话相关
+  sessions     Session[]
+  // 审计日志相关
+  auditLogs    AuditLog[]
+  // 资产管理相关
+  createdAssets Asset[] @relation("AssetCreator")
+  updatedAssets Asset[] @relation("AssetUpdater")
+  createdCategories Category[] @relation("CategoryCreator")
+  updatedCategories Category[] @relation("CategoryUpdater")
+  createdMetadataVersions MetadataVersion[] @relation("MetadataVersionCreator")
+  // 搜索相关
+  searchPreferences UserSearchPreference[]
+  searchLogs SearchLog[]
+  // 申请相关
+  applications Application[] @relation("ApplicationUser")
+  reviewedApplications Application[] @relation("ApplicationReviewer")
+  // 收藏相关
+  favorites UserFavorite[]
+
+  @@unique([ssoProvider, ssoId], name: "sso_unique")
+  @@map("users")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  userId       String
+  token        String   @unique
+  expiresAt    DateTime
+  lastActivity DateTime @default(now())
+  createdAt    DateTime @default(now())
+
+  // 关联用户
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+// 权限模型 - 定义角色权限映射
+model Permission {
+  id       String   @id @default(cuid())
+  resource String   // 资源类型：assets, applications, admin, users
+  action   String   // 操作类型：read, write, delete, manage
+  role     UserRole // 拥有此权限的角色
+  createdAt DateTime @default(now())
+
+  @@unique([resource, action, role])
+  @@map("permissions")
+}
+
+// 审计日志模型 - 记录权限相关操作
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String
+  action    String   // 操作描述，如 "role_changed", "permission_checked", "access_denied"
+  resource  String   // 资源标识，如 "user:123", "asset:456"
+  oldValue  String?  // 变更前的值
+  newValue  String?  // 变更后的值
+  ipAddress String?  // 操作IP地址
+  userAgent String?  // 用户代理
+  metadata  Json?    // 额外的元数据信息
+  createdAt DateTime @default(now())
+
+  // 关联用户
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("audit_logs")
+  @@index([userId])
+  @@index([action])
+  @@index([createdAt])
+}
+
+// SSO提供商类型枚举
+enum SSOProviderType {
+  SAML
+  OAUTH
+  LDAP
+  OIDC
+}
+
+// SSO提供商状态枚举
+enum SSOProviderStatus {
+  ACTIVE      // 活跃状态
+  INACTIVE    // 停用状态
+  TESTING     // 测试状态
+  MAINTENANCE // 维护状态
+}
+
+// SSO配置模型
+model SSOProvider {
+  id                String            @id @default(cuid())
+  name              String            @unique // 提供商名称，如 "企业Active Directory"
+  type              SSOProviderType   // 提供商类型
+  status            SSOProviderStatus @default(INACTIVE)
+
+  // 基础配置
+  entityId          String?           // SAML Entity ID 或 OAuth Client ID
+  ssoUrl            String?           // SSO登录URL
+  sloUrl            String?           // 单点登出URL
+  certificateData   String?           // X.509证书数据 (加密存储)
+  privateKeyData    String?           // 私钥数据 (加密存储)
+
+  // OAuth专用配置
+  clientSecret      String?           // OAuth Client Secret (加密存储)
+  scopes            String?           // OAuth授权范围 (JSON数组字符串)
+  userInfoUrl       String?           // 用户信息获取URL
+
+  // LDAP专用配置
+  ldapUrl           String?           // LDAP服务器URL
+  baseDn            String?           // 基础DN
+  bindDn            String?           // 绑定DN
+  bindPassword      String?           // 绑定密码 (加密存储)
+  userFilter        String?           // 用户过滤器
+
+  // 属性映射配置
+  attributeMapping  Json?             // 用户属性映射配置 (JSON对象)
+  roleMapping       Json?             // 角色映射配置 (JSON对象)
+
+  // 高级配置
+  autoProvision     Boolean @default(true)  // 是否自动创建用户
+  updateAttributes  Boolean @default(true)  // 是否更新用户属性
+  enforceSSO        Boolean @default(false) // 是否强制使用SSO
+
+  // 审计和监控
+  lastHealthCheck   DateTime?         // 最后健康检查时间
+  healthStatus      String?           // 健康状态
+  errorMessage      String?           // 最后错误信息
+
+  // 统计信息
+  totalLogins       Int      @default(0)    // 总登录次数
+  successfulLogins  Int      @default(0)    // 成功登录次数
+  lastLoginAt       DateTime?               // 最后登录时间
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  createdBy         String?           // 创建者用户ID
+  updatedBy         String?           // 更新者用户ID
+
+  // 关联
+  ssoLogs          SSOLog[]
+
+  @@map("sso_providers")
+}
+
+// SSO日志模型
+model SSOLog {
+  id           String   @id @default(cuid())
+  providerId   String
+  userId       String?  // 用户ID，可能为空（登录失败时）
+  email        String?  // 用户邮箱
+  action       String   // 操作类型：login, logout, error, health_check
+  status       String   // 状态：success, failure, warning
+  message      String?  // 详细消息
+
+  // 请求信息
+  ipAddress    String?  // IP地址
+  userAgent    String?  // 用户代理
+  sessionId    String?  // 会话ID
+
+  // 技术详情
+  responseTime Int?     // 响应时间（毫秒）
+  errorCode    String?  // 错误代码
+  metadata     Json?    // 额外元数据
+
+  createdAt    DateTime @default(now())
+
+  // 关联
+  provider SSOProvider @relation(fields: [providerId], references: [id], onDelete: Cascade)
+
+  @@map("sso_logs")
+  @@index([providerId])
+  @@index([userId])
+  @@index([action])
+  @@index([status])
+  @@index([createdAt])
+}
+
+// SSO会话模型 - 跟踪活跃的SSO会话
+model SSOSession {
+  id              String   @id @default(cuid())
+  sessionId       String   @unique // SSO会话ID
+  providerId      String
+  userId          String
+  nameId          String?  // SAML NameID
+  sessionIndex    String?  // SAML SessionIndex
+
+  // 会话信息
+  loginTime       DateTime @default(now())
+  lastActivity    DateTime @default(now())
+  expiresAt       DateTime
+
+  // 状态
+  isActive        Boolean  @default(true)
+  logoutRequested Boolean  @default(false)
+
+  // 元数据
+  ipAddress       String?
+  userAgent       String?
+  metadata        Json?
+
+  @@map("sso_sessions")
+  @@index([providerId])
+  @@index([userId])
+  @@index([sessionId])
+  @@index([isActive])
+}
+
+// 资产状态枚举
+enum AssetStatus {
+  AVAILABLE    // 可用状态 - 资产正常可申请
+  MAINTENANCE  // 维护状态 - 资产暂时不可用
+  DEPRECATED   // 已废弃状态 - 资产计划下线
+  DRAFT        // 草稿状态 - 资产尚未发布
+}
+
+// 资产敏感级别枚举
+enum AssetSensitivity {
+  PUBLIC        // 公开 - 所有人可见
+  INTERNAL      // 内部 - 公司内部可见
+  CONFIDENTIAL  // 机密 - 需要特殊权限
+}
+
+// 资产分类模型 - 支持三级分类体系
+model Category {
+  id          String   @id @default(cuid())
+  name        String   // 分类名称
+  description String?  // 分类描述
+  code        String   @unique // 分类编码，用于业务识别
+
+  // 层次结构字段
+  parentId    String?  // 父分类ID
+  depth       Int      @default(0) // 分类深度：0=业务域, 1=子类别, 2=具体分类
+  path        String?  // 分类路径，如 "/business-domain/sub-category"
+
+  // 排序和显示
+  sortOrder   Int      @default(0) // 同级分类排序
+  isActive    Boolean  @default(true) // 是否启用
+
+  // 审计字段
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  createdBy   String?  // 创建者用户ID
+  updatedBy   String?  // 更新者用户ID
+
+  // 关联关系
+  parent      Category? @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children    Category[] @relation("CategoryHierarchy")
+  assets      Asset[]   // 该分类下的资产
+  creator     User?     @relation("CategoryCreator", fields: [createdBy], references: [id])
+  updater     User?     @relation("CategoryUpdater", fields: [updatedBy], references: [id])
+
+  @@map("categories")
+  @@index([parentId])
+  @@index([depth])
+  @@index([isActive])
+  @@index([sortOrder])
+}
+
+// 数据资产模型
+model Asset {
+  id            String      @id @default(cuid())
+  name          String      // 资产名称
+  description   String?     // 资产描述
+  code          String      @unique // 资产编码，用于业务识别
+
+  // 分类关联
+  categoryId    String      // 所属分类ID
+  category      Category    @relation(fields: [categoryId], references: [id])
+
+  // 资产基本信息
+  status        AssetStatus @default(DRAFT) // 资产状态
+  sensitivity   AssetSensitivity @default(INTERNAL) // 敏感级别
+  type          String?     // 资产类型：表、视图、API等
+  format        String?     // 数据格式：JSON、CSV、Parquet等
+  size          BigInt?     // 数据大小（字节）
+  recordCount   BigInt?     // 记录数量
+
+  // 技术信息
+  databaseName  String?     // 数据库名称
+  schemaName    String?     // 架构名称
+  tableName     String?     // 表名称
+
+  // 数据质量信息
+  qualityScore  Float?      // 数据质量评分 (0-100)
+  lastValidated DateTime?   // 最后验证时间
+
+  // 使用统计
+  accessCount   Int         @default(0) // 访问次数
+  lastAccessed  DateTime?   // 最后访问时间
+
+  // 标签和元数据
+  tags          String?     // 标签（JSON数组字符串）
+
+  // 审计字段
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  createdBy     String?     // 创建者用户ID
+  updatedBy     String?     // 更新者用户ID
+
+  // 关联关系
+  metadataVersions MetadataVersion[] // 元数据版本历史
+  creator          User?             @relation("AssetCreator", fields: [createdBy], references: [id])
+  updater          User?             @relation("AssetUpdater", fields: [updatedBy], references: [id])
+  applications     Application[]     // 该资产的申请记录
+  favorites        UserFavorite[]    // 收藏记录
+
+  @@map("assets")
+  @@index([categoryId])
+  @@index([status])
+  @@index([sensitivity])
+  @@index([name])
+  @@index([updatedAt])
+  @@index([createdBy])
+  @@index([type])
+}
+
+// 元数据版本模型 - 跟踪资产元数据变更历史
+model MetadataVersion {
+  id          String   @id @default(cuid())
+  assetId     String   // 关联的资产ID
+  version     Int      // 版本号
+
+  // 元数据内容
+  schema      Json?    // 数据架构定义（字段、类型等）
+  sampleData  Json?    // 样例数据
+  statistics  Json?    // 统计信息（行数、列数、分布等）
+
+  // 变更信息
+  changeType  String   // 变更类型：CREATE, UPDATE, DELETE, SCHEMA_CHANGE
+  changeSummary String? // 变更摘要
+
+  // 审计字段
+  createdAt   DateTime @default(now())
+  createdBy   String?  // 创建者用户ID
+
+  // 关联关系
+  asset       Asset    @relation(fields: [assetId], references: [id], onDelete: Cascade)
+  creator     User?    @relation("MetadataVersionCreator", fields: [createdBy], references: [id])
+
+  @@map("metadata_versions")
+  @@index([assetId])
+  @@index([version])
+  @@index([createdAt])
+  @@unique([assetId, version])
+}
+
+// 用户搜索偏好模型 - 存储用户搜索历史和偏好
+model UserSearchPreference {
+  id            String   @id @default(cuid())
+  userId        String   // 用户ID
+
+  // 搜索历史记录
+  searchHistory Json?    // 搜索历史数组，包含查询词、时间戳、结果数量等
+
+  // 个性化偏好
+  preferredCategories String? // 偏好的分类ID列表（JSON数组）
+  preferredAssetTypes String? // 偏好的资产类型列表（JSON数组）
+  frequentSearches    Json?   // 高频搜索词统计
+
+  // 搜索配置
+  defaultSort         String? // 默认排序方式
+  defaultPageSize     Int     @default(20) // 默认页面大小
+  showSuggestions     Boolean @default(true) // 是否显示搜索建议
+  saveHistory         Boolean @default(true) // 是否保存搜索历史
+
+  // 最近活动
+  lastSearchQuery     String?  // 最后搜索查询
+  lastSearchAt        DateTime? // 最后搜索时间
+
+  // 审计字段
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  // 关联关系
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_search_preferences")
+  @@unique([userId])
+  @@index([lastSearchAt])
+}
+
+// 搜索日志模型 - 记录详细的搜索行为和分析数据
+model SearchLog {
+  id              String   @id @default(cuid())
+  userId          String?  // 用户ID（匿名搜索时可为空）
+  sessionId       String   // 会话ID
+
+  // 搜索信息
+  query           String   // 搜索查询词
+  resultCount     Int      // 搜索结果数量
+  responseTime    Int?     // 响应时间（毫秒）
+  searchType      String   // 搜索类型：full, live, suggest
+
+  // 搜索参数
+  filters         Json?    // 使用的过滤器
+  sortBy          String?  // 排序方式
+  page            Int?     // 页码
+  pageSize        Int?     // 页面大小
+
+  // 用户行为
+  action          String   // 用户行为：search, select, filter, sort
+  selectedAssetId String?  // 选择的资产ID（如果有）
+  clickPosition   Int?     // 点击位置（结果列表中的排名）
+
+  // 技术信息
+  searchEngine    String?  // 使用的搜索引擎：elasticsearch, postgresql
+  fallbackUsed    Boolean  @default(false) // 是否使用了降级搜索
+  errorMessage    String?  // 错误信息（如果有）
+
+  // 环境信息
+  ipAddress       String?  // IP地址
+  userAgent       String?  // 用户代理
+  referer         String?  // 来源页面
+
+  // 时间戳
+  createdAt       DateTime @default(now())
+
+  // 关联关系
+  user            User?    @relation(fields: [userId], references: [id])
+
+  @@map("search_logs")
+  @@index([userId])
+  @@index([sessionId])
+  @@index([query])
+  @@index([searchType])
+  @@index([action])
+  @@index([createdAt])
+}
+
+// 申请状态枚举
+enum ApplicationStatus {
+  DRAFT     // 草稿状态 - 用户正在填写申请表单
+  PENDING   // 待审核状态 - 申请已提交，等待资产管理员审核
+  APPROVED  // 已批准状态 - 申请被批准，用户可以访问资产
+  REJECTED  // 已拒绝状态 - 申请被拒绝，包含拒绝原因
+}
+
+// 业务用途枚举 - 支持结构化选择
+enum BusinessPurpose {
+  REPORT_CREATION   // 报表制作
+  DATA_ANALYSIS     // 数据分析
+  BUSINESS_MONITOR  // 业务监控
+  MODEL_TRAINING    // 模型训练
+  SYSTEM_INTEGRATION // 系统集成
+  RESEARCH_ANALYSIS  // 研究分析
+  OTHER             // 其他用途
+}
+
+// 申请表单模型
+model Application {
+  id            String           @id @default(cuid())
+
+  // 基本申请信息
+  assetId       String           // 申请的资产ID
+  userId        String           // 申请用户ID
+  status        ApplicationStatus @default(DRAFT) // 申请状态
+
+  // 申请内容字段
+  purpose       BusinessPurpose  // 业务用途（结构化选择）
+  reason        String           // 申请理由（详细说明）
+  startDate     DateTime         // 使用开始日期
+  endDate       DateTime         // 使用结束日期
+
+  // 申请人信息（自动填充，但允许编辑）
+  applicantName String           // 申请人姓名
+  department    String?          // 申请人部门
+  contactEmail  String           // 联系邮箱
+  contactPhone  String?          // 联系电话
+
+  // 审核相关字段
+  reviewerId    String?          // 审核人用户ID
+  reviewComment String?          // 审核意见
+  reviewedAt    DateTime?        // 审核时间
+
+  // 草稿相关字段
+  isDraft       Boolean          @default(true)  // 是否为草稿状态
+  draftData     Json?            // 草稿数据（JSON格式存储）
+  lastSavedAt   DateTime?        // 最后保存时间
+
+  // 系统生成字段
+  applicationNumber String       @unique // 申请编号（系统自动生成）
+
+  // 审计字段
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+  submittedAt   DateTime?        // 正式提交时间
+
+  // 关联关系
+  asset         Asset            @relation(fields: [assetId], references: [id])
+  user          User             @relation("ApplicationUser", fields: [userId], references: [id])
+  reviewer      User?            @relation("ApplicationReviewer", fields: [reviewerId], references: [id])
+  statusLogs    ApplicationStatusLog[] // 状态变更日志
+
+  @@map("applications")
+  @@index([userId])
+  @@index([assetId])
+  @@index([status])
+  @@index([createdAt])
+  @@index([submittedAt])
+  @@index([reviewerId])
+}
+
+// 申请状态变更日志表
+model ApplicationStatusLog {
+  id            String           @id @default(cuid())
+  applicationId String           // 申请ID
+  fromStatus    ApplicationStatus // 变更前状态
+  toStatus      ApplicationStatus // 变更后状态
+  operator      String?          // 操作人用户ID
+  reason        String?          // 变更原因
+  timestamp     DateTime         @default(now()) // 变更时间
+  metadata      Json?            // 额外元数据
+
+  // 关联关系
+  application   Application      @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+
+  @@map("application_status_logs")
+  @@index([applicationId])
+  @@index([timestamp])
+  @@index([fromStatus])
+  @@index([toStatus])
+}
+
+// 用户通知偏好表
+model UserNotificationPreference {
+  id                 String   @id @default(cuid())
+  userId             String   @unique // 用户ID
+  channels           Json     // 通知渠道数组 ['email', 'wechat', 'push', 'in_app']
+  silentHours        Json?    // 静默时间 {start: "22:00", end: "08:00"}
+  forceNotifyOnStatus Json?   // 强制通知的状态 ['APPROVED', 'REJECTED']
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  @@map("user_notification_preferences")
+}
+
+// 站内通知表
+model InAppNotification {
+  id        String   @id @default(cuid())
+  userId    String   // 接收用户ID
+  title     String   // 通知标题
+  content   String   // 通知内容
+  isRead    Boolean  @default(false) // 是否已读
+  isUrgent  Boolean  @default(false) // 是否紧急
+  createdAt DateTime @default(now())
+  readAt    DateTime? // 阅读时间
+
+  @@map("in_app_notifications")
+  @@index([userId])
+  @@index([isRead])
+  @@index([createdAt])
+}
+
+// 通知发送日志表
+model NotificationLog {
+  id            String   @id @default(cuid())
+  applicationId String   // 申请ID
+  channels      Json     // 发送的渠道数组
+  results       Json     // 发送结果详情
+  timestamp     DateTime @default(now())
+
+  @@map("notification_logs")
+  @@index([applicationId])
+  @@index([timestamp])
+}
+
+// 用户收藏表
+model UserFavorite {
+  id        String   @id @default(cuid())
+  userId    String   // 用户ID
+  assetId   String   // 资产ID
+  createdAt DateTime @default(now()) // 收藏时间
+
+  // 关联关系
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  asset     Asset    @relation(fields: [assetId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, assetId]) // 防止重复收藏
+  @@map("user_favorites")
+  @@index([userId])
+  @@index([assetId])
+  @@index([createdAt])
+}

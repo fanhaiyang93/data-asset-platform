@@ -155,3 +155,6 @@ export const systemAdminProcedure = protectedProcedure.use(async ({ ctx, next })
     },
   })
 })
+
+// 重新导出客户端 tRPC 实例供客户端组件使用
+export { trpc } from "./trpc-client"

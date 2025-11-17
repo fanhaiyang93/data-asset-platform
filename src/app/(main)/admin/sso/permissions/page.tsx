@@ -34,7 +34,7 @@ import {
 import {
   Users,
   Settings,
-  Sync,
+  RefreshCw as Sync,
   Plus,
   RefreshCw,
   Shield,

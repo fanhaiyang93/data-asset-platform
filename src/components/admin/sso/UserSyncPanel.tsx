@@ -27,7 +27,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import {
-  Sync,
+  RefreshCw as Sync,
   Users,
   CheckCircle,
   XCircle,

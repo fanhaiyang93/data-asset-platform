@@ -4,9 +4,11 @@ import { getTimeEstimationService } from '@/lib/services/timeEstimation'
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params
+
     const applicationId = params.id
 
     // 获取申请详情
@@ -53,6 +55,8 @@ export async function GET(
     // 计算时间预估
     let timeEstimation = null
     try {
+    const params = await context.params
+
       const timeEstimationService = getTimeEstimationService()
       const applicationWithAsset = {
         ...application,
@@ -94,9 +98,11 @@ export async function GET(
 // 手动刷新状态（用于状态同步）
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params
+
     const applicationId = params.id
 
     // 获取申请当前状态

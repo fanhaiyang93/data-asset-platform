@@ -5,9 +5,11 @@ import { getSession } from '@/lib/session'
 // 获取单个SSO提供商
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params
+
     // 验证用户权限
     const session = await getSession(request)
     if (!session?.user) {
@@ -53,9 +55,11 @@ export async function GET(
 // 更新SSO提供商
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params
+
     // 验证用户权限
     const session = await getSession(request)
     if (!session?.user) {
@@ -103,9 +107,11 @@ export async function PUT(
 // 删除SSO提供商
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params
+
     // 验证用户权限
     const session = await getSession(request)
     if (!session?.user) {

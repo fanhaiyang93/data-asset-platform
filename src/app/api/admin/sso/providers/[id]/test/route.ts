@@ -5,9 +5,11 @@ import { getSession } from '@/lib/session'
 // 测试SSO提供商连接
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params
+
     // 验证用户权限
     const session = await getSession(request)
     if (!session?.user) {

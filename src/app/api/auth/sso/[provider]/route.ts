@@ -38,9 +38,11 @@ const createUserSession = async (userInfo: any): Promise<{ token: string; respon
 // 处理SSO回调的POST请求 (SAML)
 export async function POST(
   request: NextRequest,
-  { params }: { params: { provider: string } }
+  context: { params: Promise<{ provider: string }> }
 ) {
   try {
+    const params = await context.params
+
     const { provider } = params;
 
     // 验证提供商
@@ -118,9 +120,11 @@ export async function POST(
 // 处理SSO回调的GET请求 (OAuth)
 export async function GET(
   request: NextRequest,
-  { params }: { params: { provider: string } }
+  context: { params: Promise<{ provider: string }> }
 ) {
   try {
+    const params = await context.params
+
     const { provider } = params;
     const { searchParams } = new URL(request.url);
 

@@ -4,9 +4,11 @@ import { ApplicationStatus } from '@prisma/client'
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params
+
     const applicationId = params.id
     const body = await request.json()
 
@@ -120,6 +122,8 @@ export async function POST(
     // 这里可以触发通知审核人员重新审核
     // 可以调用通知服务通知相关人员
     try {
+    const params = await context.params
+
       // TODO: 发送申诉通知给审核人员
       console.log('Appeal submitted for application:', applicationId)
     } catch (notificationError) {
@@ -148,9 +152,11 @@ export async function POST(
 // 获取申诉历史
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params
+
     const applicationId = params.id
 
     // 获取所有申诉记录

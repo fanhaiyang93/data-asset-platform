@@ -19,9 +19,11 @@ interface TimelineEvent extends StatusChangeLog {
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params
+
     const applicationId = params.id
 
     // 验证申请是否存在
@@ -113,9 +115,11 @@ export async function GET(
 // 添加新的状态变更记录（用于系统内部调用）
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params
+
     const applicationId = params.id
     const body = await request.json()
 

@@ -30,6 +30,8 @@ async function handleCallback(
   method: 'GET' | 'POST'
 ) {
   try {
+    const params = await context.params
+
     const { searchParams } = new URL(request.url)
 
     // 获取通用参数
@@ -137,6 +139,8 @@ async function processPlatformCallback(
   const { searchParams } = new URL(request.url)
 
   try {
+    const params = await context.params
+
     switch (platform) {
       case 'hive':
         return await processHiveCallback(method, request, searchParams, tokenPayload)

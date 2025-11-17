@@ -199,19 +199,19 @@ export function ApplicationReceipt({ application, className = '' }: ApplicationR
   return (
     <div className={`max-w-4xl mx-auto ${className}`}>
       {/* 操作按钮 */}
-      <div className="flex justify-end gap-2 mb-6 no-print"
+      <div className="flex justify-end gap-2 mb-6 no-print">
         <Button
-          variant="outline"}
+          variant="outline"
           onClick={handleShare}
-          className="flex items-center gap-2"}
+          className="flex items-center gap-2"
         >
           <ShareIcon className="h-4 w-4" />
           分享凭证
         </Button>
         <Button
-          variant="outline"}
+          variant="outline"
           onClick={handlePrint}
-          className="flex items-center gap-2"}
+          className="flex items-center gap-2"
         >
           <PrinterIcon className="h-4 w-4" />
           打印凭证
@@ -219,16 +219,16 @@ export function ApplicationReceipt({ application, className = '' }: ApplicationR
       </div>
 
       {/* 凭证内容 */}
-      <Card className="shadow-lg"
-        <CardHeader className="text-center bg-gradient-to-r from-blue-50 to-indigo-50 border-b"
-          <div className="flex items-center justify-center mb-4"
+      <Card className="shadow-lg">
+        <CardHeader className="text-center bg-gradient-to-r from-blue-50 to-indigo-50 border-b">
+          <div className="flex items-center justify-center mb-4">
             <DocumentTextIcon className="h-12 w-12 text-blue-600" />
           </div>
-          <CardTitle className="text-2xl font-bold text-gray-900 mb-2"
+          <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
             数据资产申请凭证
           </CardTitle>
-          <div className="flex items-center justify-center gap-4"
-            <p className="text-lg font-semibold text-gray-700"
+          <div className="flex items-center justify-center gap-4">
+            <p className="text-lg font-semibold text-gray-700">
               申请编号：{application.applicationNumber}
             </p>
             <Badge className={statusInfo.color}>
@@ -237,35 +237,35 @@ export function ApplicationReceipt({ application, className = '' }: ApplicationR
           </div>
         </CardHeader>
 
-        <CardContent ref={receiptRef} className="p-8"
+        <CardContent ref={receiptRef} className="p-8">
           {/* 申请人信息 */}
-          <div className="section"
-            <h3 className="section-title flex items-center gap-2"
+          <div className="section">
+            <h3 className="section-title flex items-center gap-2">
               <UserCircleIcon className="h-5 w-5" />
               申请人信息
             </h3>
-            <div className="info-grid"
-              <div className="info-item"
-                <span className="info-label"申请人：</span>
-                <span className="info-value font-semibold"{application.applicantName}</span>
+            <div className="info-grid">
+              <div className="info-item">
+                <span className="info-label">申请人：</span>
+                <span className="info-value font-semibold">{application.applicantName}</span>
               </div>
               {application.department && (
-                <div className="info-item"
+                <div className="info-item">
                   <BuildingOfficeIcon className="h-4 w-4 text-gray-400 mr-2" />
-                  <span className="info-label"部门：</span>
-                  <span className="info-value"{application.department}</span>
+                  <span className="info-label">部门：</span>
+                  <span className="info-value">{application.department}</span>
                 </div>
               )}
-              <div className="info-item"
+              <div className="info-item">
                 <EnvelopeIcon className="h-4 w-4 text-gray-400 mr-2" />
-                <span className="info-label"联系邮箱：</span>
-                <span className="info-value"{application.contactEmail}</span>
+                <span className="info-label">联系邮箱：</span>
+                <span className="info-value">{application.contactEmail}</span>
               </div>
               {application.contactPhone && (
-                <div className="info-item"
+                <div className="info-item">
                   <PhoneIcon className="h-4 w-4 text-gray-400 mr-2" />
-                  <span className="info-label"联系电话：</span>
-                  <span className="info-value"{application.contactPhone}</span>
+                  <span className="info-label">联系电话：</span>
+                  <span className="info-value">{application.contactPhone}</span>
                 </div>
               )}
             </div>
@@ -274,17 +274,17 @@ export function ApplicationReceipt({ application, className = '' }: ApplicationR
           <Separator className="my-6" />
 
           {/* 资产信息 */}
-          <div className="section"
-            <h3 className="section-title"申请资产信息</h3>
-            <div className="asset-info"
-              <div className="flex justify-between items-start mb-3"
-                <h4 className="text-lg font-semibold text-gray-900"{application.asset.name}</h4>
-                <Badge variant="outline"} className="ml-2"
+          <div className="section">
+            <h3 className="section-title">申请资产信息</h3>
+            <div className="asset-info">
+              <div className="flex justify-between items-start mb-3">
+                <h4 className="text-lg font-semibold text-gray-900">{application.asset.name}</h4>
+                <Badge variant="outline" className="ml-2">
                   {application.asset.category.name}
                 </Badge>
               </div>
               {application.asset.description && (
-                <p className="text-gray-600 leading-relaxed"{application.asset.description}</p>
+                <p className="text-gray-600 leading-relaxed">{application.asset.description}</p>
               )}
             </div>
           </div>
@@ -292,24 +292,24 @@ export function ApplicationReceipt({ application, className = '' }: ApplicationR
           <Separator className="my-6" />
 
           {/* 申请详情 */}
-          <div className="section"
-            <h3 className="section-title"申请详情</h3>
-            <div className="space-y-4"
-              <div className="info-item"
-                <span className="info-label"业务用途：</span>
-                <span className="info-value font-semibold"{getPurposeLabel(application.purpose)}</span>
+          <div className="section">
+            <h3 className="section-title">申请详情</h3>
+            <div className="space-y-4">
+              <div className="info-item">
+                <span className="info-label">业务用途：</span>
+                <span className="info-value font-semibold">{getPurposeLabel(application.purpose)}</span>
               </div>
-              <div className="info-item"
+              <div className="info-item">
                 <CalendarIcon className="h-4 w-4 text-gray-400 mr-2" />
-                <span className="info-label"使用期限：</span>
-                <span className="info-value"
+                <span className="info-label">使用期限：</span>
+                <span className="info-value">
                   {format(new Date(application.startDate), 'yyyy年MM月dd日')} 至{' '}
                   {format(new Date(application.endDate), 'yyyy年MM月dd日')}
                 </span>
               </div>
               <div>
-                <span className="info-label block mb-2"申请理由：</span>
-                <div className="reason-text"
+                <span className="info-label block mb-2">申请理由：</span>
+                <div className="reason-text">
                   {application.reason}
                 </div>
               </div>
@@ -319,27 +319,27 @@ export function ApplicationReceipt({ application, className = '' }: ApplicationR
           <Separator className="my-6" />
 
           {/* 时间信息 */}
-          <div className="section"
-            <h3 className="section-title"时间信息</h3>
-            <div className="info-grid"
-              <div className="info-item"
-                <span className="info-label"创建时间：</span>
-                <span className="info-value"
+          <div className="section">
+            <h3 className="section-title">时间信息</h3>
+            <div className="info-grid">
+              <div className="info-item">
+                <span className="info-label">创建时间：</span>
+                <span className="info-value">
                   {format(new Date(application.createdAt), 'yyyy-MM-dd HH:mm:ss')}
                 </span>
               </div>
               {application.submittedAt && (
-                <div className="info-item"
-                  <span className="info-label"提交时间：</span>
-                  <span className="info-value"
+                <div className="info-item">
+                  <span className="info-label">提交时间：</span>
+                  <span className="info-value">
                     {format(new Date(application.submittedAt), 'yyyy-MM-dd HH:mm:ss')}
                   </span>
                 </div>
               )}
               {application.reviewedAt && (
-                <div className="info-item"
-                  <span className="info-label"审核时间：</span>
-                  <span className="info-value"
+                <div className="info-item">
+                  <span className="info-label">审核时间：</span>
+                  <span className="info-value">
                     {format(new Date(application.reviewedAt), 'yyyy-MM-dd HH:mm:ss')}
                   </span>
                 </div>
@@ -351,13 +351,13 @@ export function ApplicationReceipt({ application, className = '' }: ApplicationR
           {application.reviewComment && (
             <>
               <Separator className="my-6" />
-              <div className="section"
-                <h3 className="section-title"审核意见</h3>
-                <div className="reason-text"
+              <div className="section">
+                <h3 className="section-title">审核意见</h3>
+                <div className="reason-text">
                   {application.reviewComment}
                 </div>
                 {application.reviewer && (
-                  <div className="mt-4 text-sm text-gray-600"
+                  <div className="mt-4 text-sm text-gray-600">
                     审核人：{application.reviewer.name || application.reviewer.email}
                   </div>
                 )}
@@ -366,9 +366,9 @@ export function ApplicationReceipt({ application, className = '' }: ApplicationR
           )}
 
           {/* 凭证验证信息 */}
-          <div className="mt-8 pt-6 border-t border-dashed border-gray-300"
-            <div className="flex items-center justify-between text-sm text-gray-500"
-              <div className="flex items-center gap-2"
+          <div className="mt-8 pt-6 border-t border-dashed border-gray-300">
+            <div className="flex items-center justify-between text-sm text-gray-500">
+              <div className="flex items-center gap-2">
                 <QrCodeIcon className="h-4 w-4" />
                 <span>凭证唯一标识：{application.applicationNumber}</span>
               </div>
@@ -376,7 +376,7 @@ export function ApplicationReceipt({ application, className = '' }: ApplicationR
                 生成时间：{format(new Date(), 'yyyy-MM-dd HH:mm:ss')}
               </div>
             </div>
-            <div className="mt-3 text-center text-xs text-gray-400"
+            <div className="mt-3 text-center text-xs text-gray-400">
               本凭证由数据资产管理平台自动生成，具有法律效力
             </div>
           </div>

@@ -115,7 +115,7 @@ function ApplicationSuccessContent({ applicationId }: ApplicationSuccessProps) {
           <CardContent className="text-center">
             <Button
               onClick={() => router.push('/applications')}
-              className="w-full"}
+              className="w-full"
             >
               返回申请列表
             </Button>
@@ -134,9 +134,8 @@ function ApplicationSuccessContent({ applicationId }: ApplicationSuccessProps) {
         {/* 返回按钮 */}
         <div className="mb-6">
           <Button
-            variant="ghost"}
-            onClick={() => router.back()}
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900"}
+            variant="ghost"             onClick={() => router.back()}
+            className="flex items-center gap-2 text-gray-600 hover:text-gray-900"
           >
             <ArrowLeftIcon className="h-4 w-4" />
             返回
@@ -312,14 +311,13 @@ function ApplicationSuccessContent({ applicationId }: ApplicationSuccessProps) {
             <div className="flex gap-4 mt-6">
               <Button
                 onClick={() => router.push('/applications')}
-                className="flex-1"}
+                className="flex-1"
               >
                 查看我的申请
               </Button>
               <Button
-                variant="outline"}
-                onClick={() => router.push('/applications/receipt/' + application.applicationNumber)}
-                className="flex-1"}
+                variant="outline"                 onClick={() => router.push('/applications/receipt/' + application.applicationNumber)}
+                className="flex-1"
               >
                 查看申请凭证
               </Button>
@@ -330,7 +328,7 @@ function ApplicationSuccessContent({ applicationId }: ApplicationSuccessProps) {
               <h4 className="font-medium text-blue-900 mb-2">需要帮助？</h4>
               <p className="text-blue-700 text-sm">
                 如有疑问，请联系我们：
-                <a href="mailto:support@example.com"} className="underline ml-1">
+                <a href="mailto:support@example.com" className="underline ml-1">
                   support@example.com
                 </a>
               </p>

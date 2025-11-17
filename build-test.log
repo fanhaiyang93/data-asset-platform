@@ -1,0 +1,760 @@
+
+> data-asset-platform@1.0.0 build
+> next build
+
+   ▲ Next.js 16.0.1 (Turbopack)
+   - Environments: .env.local, .env.production, .env
+
+   Creating an optimized production build ...
+   Using external babel configuration from /Users/fanhaiyang003/Documents/bigdata-workspace/05-ai应用/05-数据资产管理平台/data-asset-platform/.babelrc.js
+
+> Build error occurred
+Error: Turbopack build failed with 47 errors:
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:73:13
+Parsing ecmascript source code failed
+[0m [90m 71 |[39m               onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications'[39m)}
+ [90m 72 |[39m               className[33m=[39m[32m"w-full"[39m[33m>[39m}
+[31m[1m>[22m[39m[90m 73 |[39m             [33m>[39m
+ [90m    |[39m             [31m[1m^[22m[39m
+ [90m 74 |[39m               返回申请列表
+ [90m 75 |[39m             [33m<[39m[33m/[39m[33mButton[39m[33m>[39m
+ [90m 76 |[39m           [33m<[39m[33m/[39m[33mCardContent[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:90:82
+Parsing ecmascript source code failed
+[0m [90m 88 |[39m             variant[33m=[39m[32m"ghost"[39m[33m>[39m}
+ [90m 89 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+[31m[1m>[22m[39m[90m 90 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+ [90m    |[39m                                                                                  [31m[1m^[22m[39m
+ [90m 91 |[39m           [33m>[39m
+ [90m 92 |[39m             [33m<[39m[33mArrowLeftIcon[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+ [90m 93 |[39m             返回[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:91:11
+Parsing ecmascript source code failed
+[0m [90m 89 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+ [90m 90 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+[31m[1m>[22m[39m[90m 91 |[39m           [33m>[39m
+ [90m    |[39m           [31m[1m^[22m[39m
+ [90m 92 |[39m             [33m<[39m[33mArrowLeftIcon[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+ [90m 93 |[39m             返回
+ [90m 94 |[39m           [33m<[39m[33m/[39m[33mButton[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:106:13
+Parsing ecmascript source code failed
+[0m [90m 104 |[39m               variant[33m=[39m[32m"outline"[39m[33m>[39m}
+ [90m 105 |[39m               onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications'[39m)}
+[31m[1m>[22m[39m[90m 106 |[39m             [33m>[39m
+ [90m     |[39m             [31m[1m^[22m[39m
+ [90m 107 |[39m               查看我的申请
+ [90m 108 |[39m             [33m<[39m[33m/[39m[33mButton[39m[33m>[39m
+ [90m 109 |[39m             [33m<[39m[33mButton[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:122:80
+Parsing ecmascript source code failed
+[0m [90m 120 |[39m               本凭证包含您的完整申请信息，可用于查询申请状态、联系客服或作为申请记录保存。
+ [90m 121 |[39m               凭证具有唯一性，请妥善保管。如有疑问，请联系我们：
+[31m[1m>[22m[39m[90m 122 |[39m               [33m<[39m[33ma[39m href[33m=[39m[32m"mailto:support@example.com"[39m[33m>[39m} className[33m=[39m[32m"underline ml-1"[39m[33m>[39m
+ [90m     |[39m                                                                                [31m[1m^[22m[39m
+ [90m 123 |[39m                 support[33m@[39mexample[33m.[39mcom
+ [90m 124 |[39m               [33m<[39m[33m/[39m[33ma[39m[33m>[39m
+ [90m 125 |[39m             [33m<[39m[33m/[39m[33mp[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:73:1
+Parsing ecmascript source code failed
+[0m [90m 71 |[39m               onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications'[39m)}
+ [90m 72 |[39m               className[33m=[39m[32m"w-full"[39m[33m>[39m}
+[31m[1m>[22m[39m[90m 73 |[39m             [33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m
+ [90m 74 |[39m               返回申请列表
+ [90m 75 |[39m             [33m<[39m[33m/[39m[33mButton[39m[33m>[39m
+ [90m 76 |[39m           [33m<[39m[33m/[39m[33mCardContent[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:90:1
+Parsing ecmascript source code failed
+[0m [90m 88 |[39m             variant[33m=[39m[32m"ghost"[39m[33m>[39m}
+ [90m 89 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+[31m[1m>[22m[39m[90m 90 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+ [90m    |[39m [31m[1m^[22m[39m
+ [90m 91 |[39m           [33m>[39m
+ [90m 92 |[39m             [33m<[39m[33mArrowLeftIcon[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+ [90m 93 |[39m             返回[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:91:1
+Parsing ecmascript source code failed
+[0m [90m 89 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+ [90m 90 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+[31m[1m>[22m[39m[90m 91 |[39m           [33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m
+ [90m 92 |[39m             [33m<[39m[33mArrowLeftIcon[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+ [90m 93 |[39m             返回
+ [90m 94 |[39m           [33m<[39m[33m/[39m[33mButton[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:106:1
+Parsing ecmascript source code failed
+[0m [90m 104 |[39m               variant[33m=[39m[32m"outline"[39m[33m>[39m}
+ [90m 105 |[39m               onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications'[39m)}
+[31m[1m>[22m[39m[90m 106 |[39m             [33m>[39m
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 107 |[39m               查看我的申请
+ [90m 108 |[39m             [33m<[39m[33m/[39m[33mButton[39m[33m>[39m
+ [90m 109 |[39m             [33m<[39m[33mButton[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:122:52
+Parsing ecmascript source code failed
+[0m [90m 120 |[39m               本凭证包含您的完整申请信息，可用于查询申请状态、联系客服或作为申请记录保存。
+ [90m 121 |[39m               凭证具有唯一性，请妥善保管。如有疑问，请联系我们：
+[31m[1m>[22m[39m[90m 122 |[39m               [33m<[39m[33ma[39m href[33m=[39m[32m"mailto:support@example.com"[39m[33m>[39m} className[33m=[39m[32m"underline ml-1"[39m[33m>[39m
+ [90m     |[39m                                                    [31m[1m^[22m[39m
+ [90m 123 |[39m                 support[33m@[39mexample[33m.[39mcom
+ [90m 124 |[39m               [33m<[39m[33m/[39m[33ma[39m[33m>[39m
+ [90m 125 |[39m             [33m<[39m[33m/[39m[33mp[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:72:34
+Parsing ecmascript source code failed
+[0m [90m 70 |[39m             [33m<[39m[33mButton[39m
+ [90m 71 |[39m               onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications'[39m)}
+[31m[1m>[22m[39m[90m 72 |[39m               className[33m=[39m[32m"w-full"[39m[33m>[39m}
+ [90m    |[39m                                  [31m[1m^[22m[39m
+ [90m 73 |[39m             [33m>[39m
+ [90m 74 |[39m               返回申请列表
+ [90m 75 |[39m             [33m<[39m[33m/[39m[33mButton[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:88:29
+Parsing ecmascript source code failed
+[0m [90m 86 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"mb-6 no-print"[39m[33m>[39m
+ [90m 87 |[39m           [33m<[39m[33mButton[39m
+[31m[1m>[22m[39m[90m 88 |[39m             variant[33m=[39m[32m"ghost"[39m[33m>[39m}
+ [90m    |[39m                             [31m[1m^[22m[39m
+ [90m 89 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+ [90m 90 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+ [90m 91 |[39m           [33m>[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:90:83
+Parsing ecmascript source code failed
+[0m [90m 88 |[39m             variant[33m=[39m[32m"ghost"[39m[33m>[39m}
+ [90m 89 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+[31m[1m>[22m[39m[90m 90 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+ [90m    |[39m                                                                                   [31m[1m^[22m[39m
+ [90m 91 |[39m           [33m>[39m
+ [90m 92 |[39m             [33m<[39m[33mArrowLeftIcon[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+ [90m 93 |[39m             返回[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:104:33
+Parsing ecmascript source code failed
+[0m [90m 102 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m"flex justify-center gap-4"[39m[33m>[39m
+ [90m 103 |[39m             [33m<[39m[33mButton[39m
+[31m[1m>[22m[39m[90m 104 |[39m               variant[33m=[39m[32m"outline"[39m[33m>[39m}
+ [90m     |[39m                                 [31m[1m^[22m[39m
+ [90m 105 |[39m               onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications'[39m)}
+ [90m 106 |[39m             [33m>[39m
+ [90m 107 |[39m               查看我的申请[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:122:52
+Parsing ecmascript source code failed
+[0m [90m 120 |[39m               本凭证包含您的完整申请信息，可用于查询申请状态、联系客服或作为申请记录保存。
+ [90m 121 |[39m               凭证具有唯一性，请妥善保管。如有疑问，请联系我们：
+[31m[1m>[22m[39m[90m 122 |[39m               [33m<[39m[33ma[39m href[33m=[39m[32m"mailto:support@example.com"[39m[33m>[39m} className[33m=[39m[32m"underline ml-1"[39m[33m>[39m
+ [90m     |[39m                                                    [31m[1m^[22m[39m
+ [90m 123 |[39m                 support[33m@[39mexample[33m.[39mcom
+ [90m 124 |[39m               [33m<[39m[33m/[39m[33ma[39m[33m>[39m
+ [90m 125 |[39m             [33m<[39m[33m/[39m[33mp[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/receipt/[applicationId]/page.tsx:90:1
+Parsing ecmascript source code failed
+[0m [90m 88 |[39m             variant[33m=[39m[32m"ghost"[39m[33m>[39m}
+ [90m 89 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+[31m[1m>[22m[39m[90m 90 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+ [90m    |[39m [31m[1m^[22m[39m
+ [90m 91 |[39m           [33m>[39m
+ [90m 92 |[39m             [33m<[39m[33mArrowLeftIcon[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+ [90m 93 |[39m             返回[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:119:13
+Parsing ecmascript source code failed
+[0m [90m 117 |[39m               onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications'[39m)}
+ [90m 118 |[39m               className[33m=[39m[32m"w-full"[39m[33m>[39m}
+[31m[1m>[22m[39m[90m 119 |[39m             [33m>[39m
+ [90m     |[39m             [31m[1m^[22m[39m
+ [90m 120 |[39m               返回申请列表
+ [90m 121 |[39m             [33m<[39m[33m/[39m[33mButton[39m[33m>[39m
+ [90m 122 |[39m           [33m<[39m[33m/[39m[33mCardContent[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:139:82
+Parsing ecmascript source code failed
+[0m [90m 137 |[39m             variant[33m=[39m[32m"ghost"[39m[33m>[39m}
+ [90m 138 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+[31m[1m>[22m[39m[90m 139 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+ [90m     |[39m                                                                                  [31m[1m^[22m[39m
+ [90m 140 |[39m           [33m>[39m
+ [90m 141 |[39m             [33m<[39m[33mArrowLeftIcon[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+ [90m 142 |[39m             返回[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:140:11
+Parsing ecmascript source code failed
+[0m [90m 138 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+ [90m 139 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+[31m[1m>[22m[39m[90m 140 |[39m           [33m>[39m
+ [90m     |[39m           [31m[1m^[22m[39m
+ [90m 141 |[39m             [33m<[39m[33mArrowLeftIcon[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+ [90m 142 |[39m             返回
+ [90m 143 |[39m           [33m<[39m[33m/[39m[33mButton[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:316:15
+Parsing ecmascript source code failed
+[0m [90m 314 |[39m                 onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications'[39m)}
+ [90m 315 |[39m                 className[33m=[39m[32m"flex-1"[39m[33m>[39m}
+[31m[1m>[22m[39m[90m 316 |[39m               [33m>[39m
+ [90m     |[39m               [31m[1m^[22m[39m
+ [90m 317 |[39m                 查看我的申请
+ [90m 318 |[39m               [33m<[39m[33m/[39m[33mButton[39m[33m>[39m
+ [90m 319 |[39m               [33m<[39m[33mButton[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:322:35
+Parsing ecmascript source code failed
+[0m [90m 320 |[39m                 variant[33m=[39m[32m"outline"[39m[33m>[39m}
+ [90m 321 |[39m                 onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications/receipt/'[39m [33m+[39m application[33m.[39mapplicationNumber)}
+[31m[1m>[22m[39m[90m 322 |[39m                 className[33m=[39m[32m"flex-1"[39m[33m>[39m}
+ [90m     |[39m                                   [31m[1m^[22m[39m
+ [90m 323 |[39m               [33m>[39m
+ [90m 324 |[39m                 查看申请凭证
+ [90m 325 |[39m               [33m<[39m[33m/[39m[33mButton[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:323:15
+Parsing ecmascript source code failed
+[0m [90m 321 |[39m                 onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications/receipt/'[39m [33m+[39m application[33m.[39mapplicationNumber)}
+ [90m 322 |[39m                 className[33m=[39m[32m"flex-1"[39m[33m>[39m}
+[31m[1m>[22m[39m[90m 323 |[39m               [33m>[39m
+ [90m     |[39m               [31m[1m^[22m[39m
+ [90m 324 |[39m                 查看申请凭证
+ [90m 325 |[39m               [33m<[39m[33m/[39m[33mButton[39m[33m>[39m
+ [90m 326 |[39m             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:333:82
+Parsing ecmascript source code failed
+[0m [90m 331 |[39m               [33m<[39m[33mp[39m className[33m=[39m[32m"text-blue-700 text-sm"[39m[33m>[39m
+ [90m 332 |[39m                 如有疑问，请联系我们：
+[31m[1m>[22m[39m[90m 333 |[39m                 [33m<[39m[33ma[39m href[33m=[39m[32m"mailto:support@example.com"[39m[33m>[39m} className[33m=[39m[32m"underline ml-1"[39m[33m>[39m
+ [90m     |[39m                                                                                  [31m[1m^[22m[39m
+ [90m 334 |[39m                   support[33m@[39mexample[33m.[39mcom
+ [90m 335 |[39m                 [33m<[39m[33m/[39m[33ma[39m[33m>[39m
+ [90m 336 |[39m               [33m<[39m[33m/[39m[33mp[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:119:1
+Parsing ecmascript source code failed
+[0m [90m 117 |[39m               onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications'[39m)}
+ [90m 118 |[39m               className[33m=[39m[32m"w-full"[39m[33m>[39m}
+[31m[1m>[22m[39m[90m 119 |[39m             [33m>[39m
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 120 |[39m               返回申请列表
+ [90m 121 |[39m             [33m<[39m[33m/[39m[33mButton[39m[33m>[39m
+ [90m 122 |[39m           [33m<[39m[33m/[39m[33mCardContent[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:139:1
+Parsing ecmascript source code failed
+[0m [90m 137 |[39m             variant[33m=[39m[32m"ghost"[39m[33m>[39m}
+ [90m 138 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+[31m[1m>[22m[39m[90m 139 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 140 |[39m           [33m>[39m
+ [90m 141 |[39m             [33m<[39m[33mArrowLeftIcon[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+ [90m 142 |[39m             返回[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:140:1
+Parsing ecmascript source code failed
+[0m [90m 138 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+ [90m 139 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+[31m[1m>[22m[39m[90m 140 |[39m           [33m>[39m
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 141 |[39m             [33m<[39m[33mArrowLeftIcon[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+ [90m 142 |[39m             返回
+ [90m 143 |[39m           [33m<[39m[33m/[39m[33mButton[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:316:1
+Parsing ecmascript source code failed
+[0m [90m 314 |[39m                 onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications'[39m)}
+ [90m 315 |[39m                 className[33m=[39m[32m"flex-1"[39m[33m>[39m}
+[31m[1m>[22m[39m[90m 316 |[39m               [33m>[39m
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 317 |[39m                 查看我的申请
+ [90m 318 |[39m               [33m<[39m[33m/[39m[33mButton[39m[33m>[39m
+ [90m 319 |[39m               [33m<[39m[33mButton[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:322:1
+Parsing ecmascript source code failed
+[0m [90m 320 |[39m                 variant[33m=[39m[32m"outline"[39m[33m>[39m}
+ [90m 321 |[39m                 onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications/receipt/'[39m [33m+[39m application[33m.[39mapplicationNumber)}
+[31m[1m>[22m[39m[90m 322 |[39m                 className[33m=[39m[32m"flex-1"[39m[33m>[39m}
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 323 |[39m               [33m>[39m
+ [90m 324 |[39m                 查看申请凭证
+ [90m 325 |[39m               [33m<[39m[33m/[39m[33mButton[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:323:1
+Parsing ecmascript source code failed
+[0m [90m 321 |[39m                 onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications/receipt/'[39m [33m+[39m application[33m.[39mapplicationNumber)}
+ [90m 322 |[39m                 className[33m=[39m[32m"flex-1"[39m[33m>[39m}
+[31m[1m>[22m[39m[90m 323 |[39m               [33m>[39m
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 324 |[39m                 查看申请凭证
+ [90m 325 |[39m               [33m<[39m[33m/[39m[33mButton[39m[33m>[39m
+ [90m 326 |[39m             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:333:54
+Parsing ecmascript source code failed
+[0m [90m 331 |[39m               [33m<[39m[33mp[39m className[33m=[39m[32m"text-blue-700 text-sm"[39m[33m>[39m
+ [90m 332 |[39m                 如有疑问，请联系我们：
+[31m[1m>[22m[39m[90m 333 |[39m                 [33m<[39m[33ma[39m href[33m=[39m[32m"mailto:support@example.com"[39m[33m>[39m} className[33m=[39m[32m"underline ml-1"[39m[33m>[39m
+ [90m     |[39m                                                      [31m[1m^[22m[39m
+ [90m 334 |[39m                   support[33m@[39mexample[33m.[39mcom
+ [90m 335 |[39m                 [33m<[39m[33m/[39m[33ma[39m[33m>[39m
+ [90m 336 |[39m               [33m<[39m[33m/[39m[33mp[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:118:34
+Parsing ecmascript source code failed
+[0m [90m 116 |[39m             [33m<[39m[33mButton[39m
+ [90m 117 |[39m               onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications'[39m)}
+[31m[1m>[22m[39m[90m 118 |[39m               className[33m=[39m[32m"w-full"[39m[33m>[39m}
+ [90m     |[39m                                  [31m[1m^[22m[39m
+ [90m 119 |[39m             [33m>[39m
+ [90m 120 |[39m               返回申请列表
+ [90m 121 |[39m             [33m<[39m[33m/[39m[33mButton[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:137:29
+Parsing ecmascript source code failed
+[0m [90m 135 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"mb-6"[39m[33m>[39m
+ [90m 136 |[39m           [33m<[39m[33mButton[39m
+[31m[1m>[22m[39m[90m 137 |[39m             variant[33m=[39m[32m"ghost"[39m[33m>[39m}
+ [90m     |[39m                             [31m[1m^[22m[39m
+ [90m 138 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+ [90m 139 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+ [90m 140 |[39m           [33m>[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:139:83
+Parsing ecmascript source code failed
+[0m [90m 137 |[39m             variant[33m=[39m[32m"ghost"[39m[33m>[39m}
+ [90m 138 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+[31m[1m>[22m[39m[90m 139 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+ [90m     |[39m                                                                                   [31m[1m^[22m[39m
+ [90m 140 |[39m           [33m>[39m
+ [90m 141 |[39m             [33m<[39m[33mArrowLeftIcon[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+ [90m 142 |[39m             返回[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:315:36
+Parsing ecmascript source code failed
+[0m [90m 313 |[39m               [33m<[39m[33mButton[39m
+ [90m 314 |[39m                 onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications'[39m)}
+[31m[1m>[22m[39m[90m 315 |[39m                 className[33m=[39m[32m"flex-1"[39m[33m>[39m}
+ [90m     |[39m                                    [31m[1m^[22m[39m
+ [90m 316 |[39m               [33m>[39m
+ [90m 317 |[39m                 查看我的申请
+ [90m 318 |[39m               [33m<[39m[33m/[39m[33mButton[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:320:35
+Parsing ecmascript source code failed
+[0m [90m 318 |[39m               [33m<[39m[33m/[39m[33mButton[39m[33m>[39m
+ [90m 319 |[39m               [33m<[39m[33mButton[39m
+[31m[1m>[22m[39m[90m 320 |[39m                 variant[33m=[39m[32m"outline"[39m[33m>[39m}
+ [90m     |[39m                                   [31m[1m^[22m[39m
+ [90m 321 |[39m                 onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications/receipt/'[39m [33m+[39m application[33m.[39mapplicationNumber)}
+ [90m 322 |[39m                 className[33m=[39m[32m"flex-1"[39m[33m>[39m}
+ [90m 323 |[39m               [33m>[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:322:36
+Parsing ecmascript source code failed
+[0m [90m 320 |[39m                 variant[33m=[39m[32m"outline"[39m[33m>[39m}
+ [90m 321 |[39m                 onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications/receipt/'[39m [33m+[39m application[33m.[39mapplicationNumber)}
+[31m[1m>[22m[39m[90m 322 |[39m                 className[33m=[39m[32m"flex-1"[39m[33m>[39m}
+ [90m     |[39m                                    [31m[1m^[22m[39m
+ [90m 323 |[39m               [33m>[39m
+ [90m 324 |[39m                 查看申请凭证
+ [90m 325 |[39m               [33m<[39m[33m/[39m[33mButton[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:333:54
+Parsing ecmascript source code failed
+[0m [90m 331 |[39m               [33m<[39m[33mp[39m className[33m=[39m[32m"text-blue-700 text-sm"[39m[33m>[39m
+ [90m 332 |[39m                 如有疑问，请联系我们：
+[31m[1m>[22m[39m[90m 333 |[39m                 [33m<[39m[33ma[39m href[33m=[39m[32m"mailto:support@example.com"[39m[33m>[39m} className[33m=[39m[32m"underline ml-1"[39m[33m>[39m
+ [90m     |[39m                                                      [31m[1m^[22m[39m
+ [90m 334 |[39m                   support[33m@[39mexample[33m.[39mcom
+ [90m 335 |[39m                 [33m<[39m[33m/[39m[33ma[39m[33m>[39m
+ [90m 336 |[39m               [33m<[39m[33m/[39m[33mp[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:139:1
+Parsing ecmascript source code failed
+[0m [90m 137 |[39m             variant[33m=[39m[32m"ghost"[39m[33m>[39m}
+ [90m 138 |[39m             onClick[33m=[39m{() [33m=>[39m router[33m.[39mback()}
+[31m[1m>[22m[39m[90m 139 |[39m             className[33m=[39m[32m"flex items-center gap-2 text-gray-600 hover:text-gray-900"[39m[33m>[39m}
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 140 |[39m           [33m>[39m
+ [90m 141 |[39m             [33m<[39m[33mArrowLeftIcon[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+ [90m 142 |[39m             返回[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/success/[applicationId]/page.tsx:322:1
+Parsing ecmascript source code failed
+[0m [90m 320 |[39m                 variant[33m=[39m[32m"outline"[39m[33m>[39m}
+ [90m 321 |[39m                 onClick[33m=[39m{() [33m=>[39m router[33m.[39mpush([32m'/applications/receipt/'[39m [33m+[39m application[33m.[39mapplicationNumber)}
+[31m[1m>[22m[39m[90m 322 |[39m                 className[33m=[39m[32m"flex-1"[39m[33m>[39m}
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 323 |[39m               [33m>[39m
+ [90m 324 |[39m                 查看申请凭证
+ [90m 325 |[39m               [33m<[39m[33m/[39m[33mButton[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+./src/app/(main)/applications/history/[applicationId]/page.tsx:13:1
+Module not found: Can't resolve '@/components/ui/skeleton'
+[0m [90m 11 |[39m [36mimport[39m { [33mBadge[39m } [36mfrom[39m [32m'@/components/ui/badge'[39m[33m;[39m
+ [90m 12 |[39m [36mimport[39m { [33mAlert[39m[33m,[39m [33mAlertDescription[39m } [36mfrom[39m [32m'@/components/ui/alert'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m'@/components/ui/skeleton'[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mApplicationTimeline[39m } [36mfrom[39m [32m'@/components/features/applications/ApplicationTimeline'[39m[33m;[39m
+ [90m 15 |[39m [36mimport[39m { trpc } [36mfrom[39m [32m'@/lib/trpc'[39m[33m;[39m
+ [90m 16 |[39m [36mimport[39m { [33mArrowLeft[39m[33m,[39m [33mFileText[39m[33m,[39m [33mUser[39m[33m,[39m [33mBuilding[39m[33m,[39m [33mCalendar[39m[33m,[39m [33mClock[39m[33m,[39m [33mMail[39m[33m,[39m [33mPhone[39m[33m,[39m [33mDatabase[39m[33m,[39m [33mMessageSquare[39m[33m,[39m [33mCheckCircle2[39m[33m,[39m [33mXCircle[39m[33m,[39m [33mClock3[39m[33m,[39m [33mAlertCircle[39m[33m,[39m [33mCopy[39m[33m,[39m [33mExternalLink[39m } [36mfrom[39m [32m'lucide-react'[39m[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component Browser]
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component SSR]
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/(main)/applications/history/[applicationId]/page.tsx:15:1
+Module not found: Can't resolve '@/components/ui/skeleton'
+[0m [90m 13 |[39m [36mimport[39m { [33mSeparator[39m } [36mfrom[39m [32m'@/components/ui/separator'[39m
+ [90m 14 |[39m [36mimport[39m { [33mAlert[39m[33m,[39m [33mAlertDescription[39m } [36mfrom[39m [32m'@/components/ui/alert'[39m
+[31m[1m>[22m[39m[90m 15 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m'@/components/ui/skeleton'[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 16 |[39m [36mimport[39m { [33mApplicationTimeline[39m } [36mfrom[39m [32m'@/components/features/applications/ApplicationTimeline'[39m
+ [90m 17 |[39m [36mimport[39m { trpc } [36mfrom[39m [32m'@/lib/trpc'[39m
+ [90m 18 |[39m [36mimport[39m { [33mApplicationStatus[39m[33m,[39m [33mBusinessPurpose[39m } [36mfrom[39m [32m'@prisma/client'[39m[0m
+
+Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component Browser]
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component SSR]
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/features/applications/ApplicationHistoryList.tsx:16:1
+Module not found: Can't resolve '@/components/ui/skeleton'
+[0m [90m 14 |[39m [36mimport[39m { [33mCheckbox[39m } [36mfrom[39m [32m'@/components/ui/checkbox'[39m[33m;[39m
+ [90m 15 |[39m [36mimport[39m { [33mProgress[39m } [36mfrom[39m [32m'@/components/ui/progress'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 16 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m'@/components/ui/skeleton'[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 17 |[39m [36mimport[39m { [33mAlert[39m[33m,[39m [33mAlertDescription[39m } [36mfrom[39m [32m'@/components/ui/alert'[39m[33m;[39m
+ [90m 18 |[39m [36mimport[39m { [33mCalendar[39m[33m,[39m [33mUser[39m[33m,[39m [33mBuilding[39m[33m,[39m [33mFileText[39m[33m,[39m [33mDownload[39m[33m,[39m [33mCheckCircle2[39m[33m,[39m [33mXCircle[39m[33m,[39m [33mClock3[39m[33m,[39m [33mFileIcon[39m } [36mfrom[39m [32m'lucide-react'[39m[33m;[39m
+ [90m 19 |[39m [36mimport[39m { format[33m,[39m formatDistanceToNow } [36mfrom[39m [32m'date-fns'[39m[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/features/applications/ApplicationHistoryList.tsx [Client Component Browser]
+    ./src/app/(main)/applications/history/page.tsx [Client Component Browser]
+    ./src/app/(main)/applications/history/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/features/applications/ApplicationHistoryList.tsx [Client Component SSR]
+    ./src/app/(main)/applications/history/page.tsx [Client Component SSR]
+    ./src/app/(main)/applications/history/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/features/applications/ApplicationHistoryList.tsx:17:1
+Module not found: Can't resolve '@/components/ui/skeleton'
+[0m [90m 15 |[39m [36mimport[39m { [33mCheckbox[39m } [36mfrom[39m [32m'@/components/ui/checkbox'[39m
+ [90m 16 |[39m [36mimport[39m { [33mProgress[39m } [36mfrom[39m [32m'@/components/ui/progress'[39m
+[31m[1m>[22m[39m[90m 17 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m'@/components/ui/skeleton'[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 18 |[39m [36mimport[39m { [33mAlert[39m[33m,[39m [33mAlertDescription[39m } [36mfrom[39m [32m'@/components/ui/alert'[39m
+ [90m 19 |[39m [36mimport[39m { [33mSeparator[39m } [36mfrom[39m [32m'@/components/ui/separator'[39m
+ [90m 20 |[39m [36mimport[39m { [33mApplicationStatus[39m[33m,[39m [33mBusinessPurpose[39m } [36mfrom[39m [32m'@prisma/client'[39m[0m
+
+Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/features/applications/ApplicationHistoryList.tsx [Client Component Browser]
+    ./src/app/(main)/applications/history/page.tsx [Client Component Browser]
+    ./src/app/(main)/applications/history/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/features/applications/ApplicationHistoryList.tsx [Client Component SSR]
+    ./src/app/(main)/applications/history/page.tsx [Client Component SSR]
+    ./src/app/(main)/applications/history/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/features/applications/ApplicationTimeline.tsx:10:1
+Module not found: Can't resolve '@/components/ui/skeleton'
+[0m [90m  8 |[39m [36mimport[39m { [33mCard[39m[33m,[39m [33mCardContent[39m[33m,[39m [33mCardHeader[39m[33m,[39m [33mCardTitle[39m } [36mfrom[39m [32m'@/components/ui/card'[39m[33m;[39m
+ [90m  9 |[39m [36mimport[39m { [33mBadge[39m } [36mfrom[39m [32m'@/components/ui/badge'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 10 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m'@/components/ui/skeleton'[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 11 |[39m [36mimport[39m { [33mAlert[39m[33m,[39m [33mAlertDescription[39m } [36mfrom[39m [32m'@/components/ui/alert'[39m[33m;[39m
+ [90m 12 |[39m [36mimport[39m { [33mApplicationStatus[39m } [36mfrom[39m [32m'@prisma/client'[39m[33m;[39m
+ [90m 13 |[39m [36mimport[39m { [33mClock[39m[33m,[39m [33mFileText[39m[33m,[39m [33mSend[39m[33m,[39m [33mEye[39m[33m,[39m [33mCheckCircle2[39m[33m,[39m [33mXCircle[39m[33m,[39m [33mUser[39m[33m,[39m [33mMessageSquare[39m[33m,[39m [33mAlertCircle[39m[33m,[39m [33mTimer[39m } [36mfrom[39m [32m'lucide-react'[39m[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/features/applications/ApplicationTimeline.tsx [Client Component Browser]
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component Browser]
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/features/applications/ApplicationTimeline.tsx [Client Component SSR]
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component SSR]
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/features/applications/ApplicationTimeline.tsx:11:1
+Module not found: Can't resolve '@/components/ui/skeleton'
+[0m [90m  9 |[39m [36mimport[39m { [33mCard[39m[33m,[39m [33mCardContent[39m[33m,[39m [33mCardHeader[39m[33m,[39m [33mCardTitle[39m } [36mfrom[39m [32m'@/components/ui/card'[39m
+ [90m 10 |[39m [36mimport[39m { [33mBadge[39m } [36mfrom[39m [32m'@/components/ui/badge'[39m
+[31m[1m>[22m[39m[90m 11 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m'@/components/ui/skeleton'[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 12 |[39m [36mimport[39m { [33mAlert[39m[33m,[39m [33mAlertDescription[39m } [36mfrom[39m [32m'@/components/ui/alert'[39m
+ [90m 13 |[39m [36mimport[39m { [33mApplicationStatus[39m[33m,[39m [33mBusinessPurpose[39m } [36mfrom[39m [32m'@prisma/client'[39m
+ [90m 14 |[39m [36mimport[39m {[0m
+
+Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/features/applications/ApplicationTimeline.tsx [Client Component Browser]
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component Browser]
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/features/applications/ApplicationTimeline.tsx [Client Component SSR]
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component SSR]
+    ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/(main)/applications/redirect/[applicationId]/page.tsx:3:1
+Export authOptions doesn't exist in target module
+[0m [90m 1 |[39m [36mimport[39m { redirect } [36mfrom[39m [32m'next/navigation'[39m
+ [90m 2 |[39m [36mimport[39m { getServerSession } [36mfrom[39m [32m'next-auth/next'[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { authOptions } [36mfrom[39m [32m'@/lib/auth'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m [36mimport[39m { prisma } [36mfrom[39m [32m'@/lib/prisma'[39m
+ [90m 5 |[39m [36mimport[39m { [33mPlatformIntegrationService[39m } [36mfrom[39m [32m'@/lib/services/platformIntegration'[39m
+ [90m 6 |[39m [36mimport[39m { [33mPlatformRedirect[39m } [36mfrom[39m [32m'@/components/ui/application/PlatformRedirect'[39m[0m
+
+The export authOptions was not found in module [project]/src/lib/auth.ts [app-rsc] (ecmascript).
+Did you mean to import AuthService?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+./src/app/api/platform/redirect/route.ts:3:1
+Export authOptions doesn't exist in target module
+[0m [90m 1 |[39m [36mimport[39m { [33mNextRequest[39m[33m,[39m [33mNextResponse[39m } [36mfrom[39m [32m'next/server'[39m
+ [90m 2 |[39m [36mimport[39m { getServerSession } [36mfrom[39m [32m'next-auth/next'[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { authOptions } [36mfrom[39m [32m'@/lib/auth'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m [36mimport[39m { prisma } [36mfrom[39m [32m'@/lib/prisma'[39m
+ [90m 5 |[39m [36mimport[39m { [33mPlatformIntegrationService[39m } [36mfrom[39m [32m'@/lib/services/platformIntegration'[39m
+ [90m 6 |[39m [36mimport[39m { [33mSSOAuthService[39m } [36mfrom[39m [32m'@/lib/services/ssoAuth'[39m[0m
+
+The export authOptions was not found in module [project]/src/lib/auth.ts [app-route] (ecmascript).
+Did you mean to import AuthService?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:73:13)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:90:82)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:91:11)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:106:13)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:122:80)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:73:1)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:90:1)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:91:1)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:106:1)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:122:52)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:72:34)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:88:29)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:90:83)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:104:33)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:122:52)
+    at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:90:1)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:119:13)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:139:82)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:140:11)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:316:15)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:322:35)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:323:15)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:333:82)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:119:1)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:139:1)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:140:1)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:316:1)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:322:1)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:323:1)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:333:54)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:118:34)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:137:29)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:139:83)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:315:36)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:320:35)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:322:36)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:333:54)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:139:1)
+    at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:322:1)
+    at <unknown> (./src/app/(main)/applications/history/[applicationId]/page.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/(main)/applications/history/[applicationId]/page.tsx:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/features/applications/ApplicationHistoryList.tsx:16:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/features/applications/ApplicationHistoryList.tsx:17:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/features/applications/ApplicationTimeline.tsx:10:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/features/applications/ApplicationTimeline.tsx:11:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/(main)/applications/redirect/[applicationId]/page.tsx:3:1)
+    at <unknown> (./src/app/api/platform/redirect/route.ts:3:1)

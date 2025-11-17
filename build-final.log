@@ -1,0 +1,9 @@
+
+> data-asset-platform@1.0.0 build
+> next build
+
+   ▲ Next.js 16.0.1 (Turbopack)
+   - Environments: .env.local, .env.production, .env
+
+   Creating an optimized production build ...
+   Using external babel configuration from /Users/fanhaiyang003/Documents/bigdata-workspace/05-ai应用/05-数据资产管理平台/data-asset-platform/.babelrc.js

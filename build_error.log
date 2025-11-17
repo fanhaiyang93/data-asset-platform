@@ -1,387 +1,359 @@
- Build error occurred
-2025-11-17T09:37:04.643Z  Error: Turbopack build failed with 14 errors:
-2025-11-17T09:37:04.644Z  ./src/app/(main)/applications/receipt/[applicationId]/page.tsx
-2025-11-17T09:37:04.644Z  Error evaluating Node.js code
-2025-11-17T09:37:04.645Z  SyntaxError: /vercel/path0/src/app/(main)/applications/receipt/[applicationId]/page.tsx: Expecting Unicode escape sequence \uXXXX. (88:21)
-2025-11-17T09:37:04.645Z  
-2025-11-17T09:37:04.645Z    86 |         <div className="mb-6 no-print">
-2025-11-17T09:37:04.645Z    87 |           <Button
-2025-11-17T09:37:04.645Z  > 88 |             variant=\"ghost\"
-2025-11-17T09:37:04.646Z       |                      ^
-2025-11-17T09:37:04.646Z    89 |             onClick={() => router.back()}
-2025-11-17T09:37:04.646Z    90 |             className="flex items-center gap-2 text-gray-600 hover:text-gray-900\"
-2025-11-17T09:37:04.646Z    91 |           >
-2025-11-17T09:37:04.647Z      [at constructor (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:137105)]
-2025-11-17T09:37:04.647Z      [at TypeScriptParserMixin.raise (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:194164)]
-2025-11-17T09:37:04.647Z      [at TypeScriptParserMixin.readWord1 (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:193468)]
-2025-11-17T09:37:04.647Z      [at TypeScriptParserMixin.readWord (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:193792)]
-2025-11-17T09:37:04.648Z      [at TypeScriptParserMixin.getTokenFromCode (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:188124)]
-2025-11-17T09:37:04.649Z      [at TypeScriptParserMixin.getTokenFromCode (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:269800)]
-2025-11-17T09:37:04.649Z      [at TypeScriptParserMixin.getTokenFromCode (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:334887)]
-2025-11-17T09:37:04.649Z      [at TypeScriptParserMixin.nextToken (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:178715)]
-2025-11-17T09:37:04.649Z      [at TypeScriptParserMixin.next (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:177134)]
-2025-11-17T09:37:04.650Z      [at TypeScriptParserMixin.eat (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:177176)]
-2025-11-17T09:37:04.650Z      [at TypeScriptParserMixin.jsxParseAttribute (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:266906)]
-2025-11-17T09:37:04.650Z      [at TypeScriptParserMixin.jsxParseOpeningElementAfterName (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267291)]
-2025-11-17T09:37:04.650Z      [at TypeScriptParserMixin.jsxParseOpeningElementAfterName (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:335924)]
-2025-11-17T09:37:04.650Z      [at TypeScriptParserMixin.jsxParseOpeningElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267157)]
-2025-11-17T09:37:04.651Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267708)]
-2025-11-17T09:37:04.651Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267915)]
-2025-11-17T09:37:04.653Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267915)]
-2025-11-17T09:37:04.653Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267915)]
-2025-11-17T09:37:04.654Z      [at TypeScriptParserMixin.jsxParseElement (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:268987)]
-2025-11-17T09:37:04.654Z      [at TypeScriptParserMixin.parseExprAtom (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:269115)]
-2025-11-17T09:37:04.654Z      [at TypeScriptParserMixin.parseExprSubscripts (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:356364)]
-2025-11-17T09:37:04.654Z      [at TypeScriptParserMixin.parseUpdate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355963)]
-2025-11-17T09:37:04.654Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355527)]
-2025-11-17T09:37:04.654Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:331837)]
-2025-11-17T09:37:04.655Z      [at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352169)]
-2025-11-17T09:37:04.655Z      [at TypeScriptParserMixin.parseExprOps (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352281)]
-2025-11-17T09:37:04.655Z      [at TypeScriptParserMixin.parseMaybeConditional (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:351760)]
-2025-11-17T09:37:04.655Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350714)]
-2025-11-17T09:37:04.655Z      [at /vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:330420]
-2025-11-17T09:37:04.655Z      [at TypeScriptParserMixin.tryParse (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:199742)]
-2025-11-17T09:37:04.655Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:330400)]
-2025-11-17T09:37:04.656Z      [at /vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350260]
-2025-11-17T09:37:04.662Z      [at TypeScriptParserMixin.allowInAnd (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:383968)]
-2025-11-17T09:37:04.662Z      [at TypeScriptParserMixin.parseMaybeAssignAllowIn (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350239)]
-2025-11-17T09:37:04.662Z      [at TypeScriptParserMixin.parseParenAndDistinguishExpression (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:369230)]
-2025-11-17T09:37:04.662Z      [at TypeScriptParserMixin.parseExprAtom (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:361477)]
-2025-11-17T09:37:04.662Z      [at TypeScriptParserMixin.parseExprAtom (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:269272)]
-2025-11-17T09:37:04.662Z      [at TypeScriptParserMixin.parseExprSubscripts (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:356364)]
-2025-11-17T09:37:04.662Z      [at TypeScriptParserMixin.parseUpdate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355963)]
-2025-11-17T09:37:04.663Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355527)]
-2025-11-17T09:37:04.663Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:331837)]
-2025-11-17T09:37:04.663Z      [at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352169)]
-2025-11-17T09:37:04.663Z      [at TypeScriptParserMixin.parseExprOps (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352281)]
-2025-11-17T09:37:04.663Z      [at TypeScriptParserMixin.parseMaybeConditional (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:351760)]
-2025-11-17T09:37:04.663Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350714)]
-2025-11-17T09:37:04.663Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:330620)]
-2025-11-17T09:37:04.664Z      [at TypeScriptParserMixin.parseExpressionBase (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:349863)]
-2025-11-17T09:37:04.664Z      [at /vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:349774]
-2025-11-17T09:37:04.664Z      [at TypeScriptParserMixin.allowInAnd (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:383926)]
-2025-11-17T09:37:04.664Z      [at TypeScriptParserMixin.parseExpression (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:349753)]
-2025-11-17T09:37:04.664Z  
-2025-11-17T09:37:04.664Z  
-2025-11-17T09:37:04.664Z  ./src/app/(main)/applications/success/[applicationId]/page.tsx
-2025-11-17T09:37:04.665Z  Error evaluating Node.js code
-2025-11-17T09:37:04.665Z  SyntaxError: /vercel/path0/src/app/(main)/applications/success/[applicationId]/page.tsx: Expecting Unicode escape sequence \uXXXX. (137:21)
-2025-11-17T09:37:04.665Z  
-2025-11-17T09:37:04.665Z    135 |         <div className="mb-6">
-2025-11-17T09:37:04.665Z    136 |           <Button
-2025-11-17T09:37:04.665Z  > 137 |             variant=\"ghost\"
-2025-11-17T09:37:04.665Z        |                      ^
-2025-11-17T09:37:04.666Z    138 |             onClick={() => router.back()}
-2025-11-17T09:37:04.666Z    139 |             className="flex items-center gap-2 text-gray-600 hover:text-gray-900\"
-2025-11-17T09:37:04.666Z    140 |           >
-2025-11-17T09:37:04.666Z      [at constructor (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:137105)]
-2025-11-17T09:37:04.667Z      [at TypeScriptParserMixin.raise (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:194164)]
-2025-11-17T09:37:04.667Z      [at TypeScriptParserMixin.readWord1 (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:193468)]
-2025-11-17T09:37:04.667Z      [at TypeScriptParserMixin.readWord (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:193792)]
-2025-11-17T09:37:04.668Z      [at TypeScriptParserMixin.getTokenFromCode (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:188124)]
-2025-11-17T09:37:04.668Z      [at TypeScriptParserMixin.getTokenFromCode (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:269800)]
-2025-11-17T09:37:04.668Z      [at TypeScriptParserMixin.getTokenFromCode (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:334887)]
-2025-11-17T09:37:04.668Z      [at TypeScriptParserMixin.nextToken (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:178715)]
-2025-11-17T09:37:04.668Z      [at TypeScriptParserMixin.next (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:177134)]
-2025-11-17T09:37:04.668Z      [at TypeScriptParserMixin.eat (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:177176)]
-2025-11-17T09:37:04.668Z      [at TypeScriptParserMixin.jsxParseAttribute (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:266906)]
-2025-11-17T09:37:04.669Z      [at TypeScriptParserMixin.jsxParseOpeningElementAfterName (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267291)]
-2025-11-17T09:37:04.669Z      [at TypeScriptParserMixin.jsxParseOpeningElementAfterName (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:335924)]
-2025-11-17T09:37:04.669Z      [at TypeScriptParserMixin.jsxParseOpeningElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267157)]
-2025-11-17T09:37:04.669Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267708)]
-2025-11-17T09:37:04.669Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267915)]
-2025-11-17T09:37:04.669Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267915)]
-2025-11-17T09:37:04.669Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267915)]
-2025-11-17T09:37:04.669Z      [at TypeScriptParserMixin.jsxParseElement (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:268987)]
-2025-11-17T09:37:04.670Z      [at TypeScriptParserMixin.parseExprAtom (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:269115)]
-2025-11-17T09:37:04.670Z      [at TypeScriptParserMixin.parseExprSubscripts (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:356364)]
-2025-11-17T09:37:04.670Z      [at TypeScriptParserMixin.parseUpdate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355963)]
-2025-11-17T09:37:04.670Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355527)]
-2025-11-17T09:37:04.670Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:331837)]
-2025-11-17T09:37:04.670Z      [at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352169)]
-2025-11-17T09:37:04.671Z      [at TypeScriptParserMixin.parseExprOps (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352281)]
-2025-11-17T09:37:04.671Z      [at TypeScriptParserMixin.parseMaybeConditional (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:351760)]
-2025-11-17T09:37:04.671Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350714)]
-2025-11-17T09:37:04.671Z      [at /vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:330420]
-2025-11-17T09:37:04.671Z      [at TypeScriptParserMixin.tryParse (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:199742)]
-2025-11-17T09:37:04.671Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:330400)]
-2025-11-17T09:37:04.671Z      [at /vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350260]
-2025-11-17T09:37:04.671Z      [at TypeScriptParserMixin.allowInAnd (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:383968)]
-2025-11-17T09:37:04.672Z      [at TypeScriptParserMixin.parseMaybeAssignAllowIn (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350239)]
-2025-11-17T09:37:04.672Z      [at TypeScriptParserMixin.parseParenAndDistinguishExpression (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:369230)]
-2025-11-17T09:37:04.672Z      [at TypeScriptParserMixin.parseExprAtom (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:361477)]
-2025-11-17T09:37:04.672Z      [at TypeScriptParserMixin.parseExprAtom (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:269272)]
-2025-11-17T09:37:04.672Z      [at TypeScriptParserMixin.parseExprSubscripts (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:356364)]
-2025-11-17T09:37:04.672Z      [at TypeScriptParserMixin.parseUpdate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355963)]
-2025-11-17T09:37:04.672Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355527)]
-2025-11-17T09:37:04.672Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:331837)]
-2025-11-17T09:37:04.673Z      [at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352169)]
-2025-11-17T09:37:04.673Z      [at TypeScriptParserMixin.parseExprOps (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352281)]
-2025-11-17T09:37:04.673Z      [at TypeScriptParserMixin.parseMaybeConditional (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:351760)]
-2025-11-17T09:37:04.673Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350714)]
-2025-11-17T09:37:04.673Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:330620)]
-2025-11-17T09:37:04.673Z      [at TypeScriptParserMixin.parseExpressionBase (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:349863)]
-2025-11-17T09:37:04.673Z      [at /vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:349774]
-2025-11-17T09:37:04.674Z      [at TypeScriptParserMixin.allowInAnd (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:383926)]
-2025-11-17T09:37:04.674Z      [at TypeScriptParserMixin.parseExpression (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:349753)]
-2025-11-17T09:37:04.674Z  
-2025-11-17T09:37:04.674Z  
-2025-11-17T09:37:04.674Z  ./src/app/(main)/applications/receipt/[applicationId]/page.tsx:88:21
-2025-11-17T09:37:04.674Z  Parsing ecmascript source code failed
-2025-11-17T09:37:04.674Z    86 |         <div className="mb-6 no-print">
-2025-11-17T09:37:04.674Z    87 |           <Button
-2025-11-17T09:37:04.675Z  > 88 |             variant=\"ghost\"
-2025-11-17T09:37:04.675Z       |                     ^
-2025-11-17T09:37:04.675Z    89 |             onClick={() => router.back()}
-2025-11-17T09:37:04.675Z    90 |             className="flex items-center gap-2 text-gray-600 hover:text-gray-900\"
-2025-11-17T09:37:04.675Z    91 |           >
-2025-11-17T09:37:04.675Z  
-2025-11-17T09:37:04.675Z  Expected unicode escape
-2025-11-17T09:37:04.676Z  
-2025-11-17T09:37:04.676Z  
-2025-11-17T09:37:04.676Z  ./src/app/(main)/applications/receipt/[applicationId]/page.tsx:88:22
-2025-11-17T09:37:04.676Z  Parsing ecmascript source code failed
-2025-11-17T09:37:04.676Z    86 |         <div className="mb-6 no-print">
-2025-11-17T09:37:04.676Z    87 |           <Button
-2025-11-17T09:37:04.676Z  > 88 |             variant=\"ghost\"
-2025-11-17T09:37:04.676Z       |                      ^^^^^^^^
-2025-11-17T09:37:04.677Z    89 |             onClick={() => router.back()}
-2025-11-17T09:37:04.677Z    90 |             className="flex items-center gap-2 text-gray-600 hover:text-gray-900\"
-2025-11-17T09:37:04.677Z    91 |           >
-2025-11-17T09:37:04.677Z  
-2025-11-17T09:37:04.677Z  Unterminated string constant
-2025-11-17T09:37:04.677Z  
-2025-11-17T09:37:04.677Z  
-2025-11-17T09:37:04.677Z  ./src/app/(main)/applications/success/[applicationId]/page.tsx:137:21
-2025-11-17T09:37:04.678Z  Parsing ecmascript source code failed
-2025-11-17T09:37:04.678Z    135 |         <div className="mb-6">
-2025-11-17T09:37:04.678Z    136 |           <Button
-2025-11-17T09:37:04.678Z  > 137 |             variant=\"ghost\"
-2025-11-17T09:37:04.678Z        |                     ^
-2025-11-17T09:37:04.678Z    138 |             onClick={() => router.back()}
-2025-11-17T09:37:04.678Z    139 |             className="flex items-center gap-2 text-gray-600 hover:text-gray-900\"
-2025-11-17T09:37:04.679Z    140 |           >
-2025-11-17T09:37:04.679Z  
-2025-11-17T09:37:04.679Z  Expected unicode escape
-2025-11-17T09:37:04.679Z  
-2025-11-17T09:37:04.679Z  
-2025-11-17T09:37:04.679Z  ./src/app/(main)/applications/success/[applicationId]/page.tsx:137:22
-2025-11-17T09:37:04.679Z  Parsing ecmascript source code failed
-2025-11-17T09:37:04.679Z    135 |         <div className="mb-6">
-2025-11-17T09:37:04.680Z    136 |           <Button
-2025-11-17T09:37:04.680Z  > 137 |             variant=\"ghost\"
-2025-11-17T09:37:04.680Z        |                      ^^^^^^^^
-2025-11-17T09:37:04.680Z    138 |             onClick={() => router.back()}
-2025-11-17T09:37:04.680Z    139 |             className="flex items-center gap-2 text-gray-600 hover:text-gray-900\"
-2025-11-17T09:37:04.680Z    140 |           >
-2025-11-17T09:37:04.680Z  
-2025-11-17T09:37:04.680Z  Unterminated string constant
-2025-11-17T09:37:04.681Z  
-2025-11-17T09:37:04.681Z  
-2025-11-17T09:37:04.681Z  ./src/app/(main)/applications/history/[applicationId]/page.tsx:13:1
-2025-11-17T09:37:04.681Z  Module not found: Can't resolve '@/components/ui/skeleton'
-2025-11-17T09:37:04.681Z    11 | import { Badge } from '@/components/ui/badge';
-2025-11-17T09:37:04.681Z    12 | import { Alert, AlertDescription } from '@/components/ui/alert';
-2025-11-17T09:37:04.681Z  > 13 | import { Skeleton } from '@/components/ui/skeleton';
-2025-11-17T09:37:04.682Z       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2025-11-17T09:37:04.682Z    14 | import { ApplicationTimeline } from '@/components/features/applications/ApplicationTimeline';
-2025-11-17T09:37:04.682Z    15 | import { trpc } from '@/lib/trpc';
-2025-11-17T09:37:04.683Z    16 | import { ArrowLeft, FileText, User, Building, Calendar, Clock, Mail, Phone, Database, MessageSquare, CheckCircle2, XCircle, Clock3, AlertCircle, Copy, ExternalLink } from 'lucide-react';
-2025-11-17T09:37:04.684Z  
-2025-11-17T09:37:04.684Z  Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
-2025-11-17T09:37:04.684Z  
-2025-11-17T09:37:04.684Z  
-2025-11-17T09:37:04.684Z  Import traces:
-2025-11-17T09:37:04.684Z    Client Component Browser:
-2025-11-17T09:37:04.684Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component Browser]
-2025-11-17T09:37:04.685Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
-2025-11-17T09:37:04.685Z  
-2025-11-17T09:37:04.685Z    Client Component SSR:
-2025-11-17T09:37:04.685Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component SSR]
-2025-11-17T09:37:04.686Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
-2025-11-17T09:37:04.686Z  
-2025-11-17T09:37:04.686Z  https://nextjs.org/docs/messages/module-not-found
-2025-11-17T09:37:04.686Z  
-2025-11-17T09:37:04.687Z  
-2025-11-17T09:37:04.687Z  ./src/app/(main)/applications/history/[applicationId]/page.tsx:15:1
-2025-11-17T09:37:04.687Z  Module not found: Can't resolve '@/components/ui/skeleton'
-2025-11-17T09:37:04.687Z    13 | import { Separator } from '@/components/ui/separator'
-2025-11-17T09:37:04.687Z    14 | import { Alert, AlertDescription } from '@/components/ui/alert'
-2025-11-17T09:37:04.687Z  > 15 | import { Skeleton } from '@/components/ui/skeleton'
-2025-11-17T09:37:04.687Z       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2025-11-17T09:37:04.688Z    16 | import { ApplicationTimeline } from '@/components/features/applications/ApplicationTimeline'
-2025-11-17T09:37:04.688Z    17 | import { trpc } from '@/lib/trpc'
-2025-11-17T09:37:04.688Z    18 | import { ApplicationStatus, BusinessPurpose } from '@prisma/client'
-2025-11-17T09:37:04.689Z  
-2025-11-17T09:37:04.689Z  Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
-2025-11-17T09:37:04.689Z  
-2025-11-17T09:37:04.689Z  
-2025-11-17T09:37:04.689Z  Import traces:
-2025-11-17T09:37:04.689Z    Client Component Browser:
-2025-11-17T09:37:04.689Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component Browser]
-2025-11-17T09:37:04.689Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
-2025-11-17T09:37:04.690Z  
-2025-11-17T09:37:04.690Z    Client Component SSR:
-2025-11-17T09:37:04.690Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component SSR]
-2025-11-17T09:37:04.690Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
-2025-11-17T09:37:04.690Z  
-2025-11-17T09:37:04.690Z  https://nextjs.org/docs/messages/module-not-found
-2025-11-17T09:37:04.690Z  
-2025-11-17T09:37:04.691Z  
-2025-11-17T09:37:04.691Z  ./src/components/features/applications/ApplicationHistoryList.tsx:16:1
-2025-11-17T09:37:04.691Z  Module not found: Can't resolve '@/components/ui/skeleton'
-2025-11-17T09:37:04.691Z    14 | import { Checkbox } from '@/components/ui/checkbox';
-2025-11-17T09:37:04.691Z    15 | import { Progress } from '@/components/ui/progress';
-2025-11-17T09:37:04.691Z  > 16 | import { Skeleton } from '@/components/ui/skeleton';
-2025-11-17T09:37:04.691Z       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2025-11-17T09:37:04.692Z    17 | import { Alert, AlertDescription } from '@/components/ui/alert';
-2025-11-17T09:37:04.692Z    18 | import { Calendar, User, Building, FileText, Download, CheckCircle2, XCircle, Clock3, FileIcon } from 'lucide-react';
-2025-11-17T09:37:04.692Z    19 | import { format, formatDistanceToNow } from 'date-fns';
-2025-11-17T09:37:04.692Z  
-2025-11-17T09:37:04.692Z  Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
-2025-11-17T09:37:04.692Z  
-2025-11-17T09:37:04.692Z  
-2025-11-17T09:37:04.693Z  Import traces:
-2025-11-17T09:37:04.693Z    Client Component Browser:
-2025-11-17T09:37:04.693Z      ./src/components/features/applications/ApplicationHistoryList.tsx [Client Component Browser]
-2025-11-17T09:37:04.693Z      ./src/app/(main)/applications/history/page.tsx [Client Component Browser]
-2025-11-17T09:37:04.693Z      ./src/app/(main)/applications/history/page.tsx [Server Component]
-2025-11-17T09:37:04.693Z  
-2025-11-17T09:37:04.693Z    Client Component SSR:
-2025-11-17T09:37:04.693Z      ./src/components/features/applications/ApplicationHistoryList.tsx [Client Component SSR]
-2025-11-17T09:37:04.694Z      ./src/app/(main)/applications/history/page.tsx [Client Component SSR]
-2025-11-17T09:37:04.694Z      ./src/app/(main)/applications/history/page.tsx [Server Component]
-2025-11-17T09:37:04.694Z  
-2025-11-17T09:37:04.694Z  https://nextjs.org/docs/messages/module-not-found
-2025-11-17T09:37:04.694Z  
-2025-11-17T09:37:04.694Z  
-2025-11-17T09:37:04.694Z  ./src/components/features/applications/ApplicationHistoryList.tsx:17:1
-2025-11-17T09:37:04.695Z  Module not found: Can't resolve '@/components/ui/skeleton'
-2025-11-17T09:37:04.695Z    15 | import { Checkbox } from '@/components/ui/checkbox'
-2025-11-17T09:37:04.695Z    16 | import { Progress } from '@/components/ui/progress'
-2025-11-17T09:37:04.695Z  > 17 | import { Skeleton } from '@/components/ui/skeleton'
-2025-11-17T09:37:04.695Z       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2025-11-17T09:37:04.695Z    18 | import { Alert, AlertDescription } from '@/components/ui/alert'
-2025-11-17T09:37:04.695Z    19 | import { Separator } from '@/components/ui/separator'
-2025-11-17T09:37:04.696Z    20 | import { ApplicationStatus, BusinessPurpose } from '@prisma/client'
-2025-11-17T09:37:04.696Z  
-2025-11-17T09:37:04.696Z  Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
-2025-11-17T09:37:04.696Z  
-2025-11-17T09:37:04.696Z  
-2025-11-17T09:37:04.696Z  Import traces:
-2025-11-17T09:37:04.696Z    Client Component Browser:
-2025-11-17T09:37:04.696Z      ./src/components/features/applications/ApplicationHistoryList.tsx [Client Component Browser]
-2025-11-17T09:37:04.697Z      ./src/app/(main)/applications/history/page.tsx [Client Component Browser]
-2025-11-17T09:37:04.697Z      ./src/app/(main)/applications/history/page.tsx [Server Component]
-2025-11-17T09:37:04.697Z  
-2025-11-17T09:37:04.697Z    Client Component SSR:
-2025-11-17T09:37:04.697Z      ./src/components/features/applications/ApplicationHistoryList.tsx [Client Component SSR]
-2025-11-17T09:37:04.697Z      ./src/app/(main)/applications/history/page.tsx [Client Component SSR]
-2025-11-17T09:37:04.697Z      ./src/app/(main)/applications/history/page.tsx [Server Component]
-2025-11-17T09:37:04.697Z  
-2025-11-17T09:37:04.698Z  https://nextjs.org/docs/messages/module-not-found
-2025-11-17T09:37:04.698Z  
-2025-11-17T09:37:04.698Z  
-2025-11-17T09:37:04.698Z  ./src/components/features/applications/ApplicationTimeline.tsx:10:1
-2025-11-17T09:37:04.698Z  Module not found: Can't resolve '@/components/ui/skeleton'
-2025-11-17T09:37:04.698Z     8 | import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-2025-11-17T09:37:04.698Z     9 | import { Badge } from '@/components/ui/badge';
-2025-11-17T09:37:04.699Z  > 10 | import { Skeleton } from '@/components/ui/skeleton';
-2025-11-17T09:37:04.699Z       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2025-11-17T09:37:04.699Z    11 | import { Alert, AlertDescription } from '@/components/ui/alert';
-2025-11-17T09:37:04.699Z    12 | import { ApplicationStatus } from '@prisma/client';
-2025-11-17T09:37:04.699Z    13 | import { Clock, FileText, Send, Eye, CheckCircle2, XCircle, User, MessageSquare, AlertCircle, Timer } from 'lucide-react';
-2025-11-17T09:37:04.699Z  
-2025-11-17T09:37:04.700Z  Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
-2025-11-17T09:37:04.700Z  
-2025-11-17T09:37:04.700Z  
-2025-11-17T09:37:04.700Z  Import traces:
-2025-11-17T09:37:04.700Z    Client Component Browser:
-2025-11-17T09:37:04.700Z      ./src/components/features/applications/ApplicationTimeline.tsx [Client Component Browser]
-2025-11-17T09:37:04.700Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component Browser]
-2025-11-17T09:37:04.701Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
-2025-11-17T09:37:04.701Z  
-2025-11-17T09:37:04.701Z    Client Component SSR:
-2025-11-17T09:37:04.701Z      ./src/components/features/applications/ApplicationTimeline.tsx [Client Component SSR]
-2025-11-17T09:37:04.701Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component SSR]
-2025-11-17T09:37:04.701Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
-2025-11-17T09:37:04.701Z  
-2025-11-17T09:37:04.701Z  https://nextjs.org/docs/messages/module-not-found
-2025-11-17T09:37:04.702Z  
-2025-11-17T09:37:04.702Z  
-2025-11-17T09:37:04.702Z  ./src/components/features/applications/ApplicationTimeline.tsx:11:1
-2025-11-17T09:37:04.702Z  Module not found: Can't resolve '@/components/ui/skeleton'
-2025-11-17T09:37:04.702Z     9 | import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-2025-11-17T09:37:04.702Z    10 | import { Badge } from '@/components/ui/badge'
-2025-11-17T09:37:04.702Z  > 11 | import { Skeleton } from '@/components/ui/skeleton'
-2025-11-17T09:37:04.703Z       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2025-11-17T09:37:04.703Z    12 | import { Alert, AlertDescription } from '@/components/ui/alert'
-2025-11-17T09:37:04.703Z    13 | import { ApplicationStatus, BusinessPurpose } from '@prisma/client'
-2025-11-17T09:37:04.703Z    14 | import {
-2025-11-17T09:37:04.703Z  
-2025-11-17T09:37:04.703Z  Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
-2025-11-17T09:37:04.703Z  
-2025-11-17T09:37:04.703Z  
-2025-11-17T09:37:04.704Z  Import traces:
-2025-11-17T09:37:04.704Z    Client Component Browser:
-2025-11-17T09:37:04.704Z      ./src/components/features/applications/ApplicationTimeline.tsx [Client Component Browser]
-2025-11-17T09:37:04.704Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component Browser]
-2025-11-17T09:37:04.704Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
-2025-11-17T09:37:04.704Z  
-2025-11-17T09:37:04.704Z    Client Component SSR:
-2025-11-17T09:37:04.705Z      ./src/components/features/applications/ApplicationTimeline.tsx [Client Component SSR]
-2025-11-17T09:37:04.705Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component SSR]
-2025-11-17T09:37:04.705Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
-2025-11-17T09:37:04.705Z  
-2025-11-17T09:37:04.705Z  https://nextjs.org/docs/messages/module-not-found
-2025-11-17T09:37:04.705Z  
-2025-11-17T09:37:04.705Z  
-2025-11-17T09:37:04.706Z  ./src/app/(main)/applications/redirect/[applicationId]/page.tsx:3:1
-2025-11-17T09:37:04.706Z  Export authOptions doesn't exist in target module
-2025-11-17T09:37:04.706Z    1 | import { redirect } from 'next/navigation'
-2025-11-17T09:37:04.706Z    2 | import { getServerSession } from 'next-auth/next'
-2025-11-17T09:37:04.706Z  > 3 | import { authOptions } from '@/lib/auth'
-2025-11-17T09:37:04.706Z      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2025-11-17T09:37:04.707Z    4 | import { prisma } from '@/lib/prisma'
-2025-11-17T09:37:04.707Z    5 | import { PlatformIntegrationService } from '@/lib/services/platformIntegration'
-2025-11-17T09:37:04.707Z    6 | import { PlatformRedirect } from '@/components/ui/application/PlatformRedirect'
-2025-11-17T09:37:04.707Z  
-2025-11-17T09:37:04.708Z  The export authOptions was not found in module [project]/src/lib/auth.ts [app-rsc] (ecmascript).
-2025-11-17T09:37:04.708Z  Did you mean to import AuthService?
-2025-11-17T09:37:04.708Z  All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-2025-11-17T09:37:04.708Z  
-2025-11-17T09:37:04.708Z  
-2025-11-17T09:37:04.708Z  ./src/app/api/platform/redirect/route.ts:3:1
-2025-11-17T09:37:04.708Z  Export authOptions doesn't exist in target module
-2025-11-17T09:37:04.709Z    1 | import { NextRequest, NextResponse } from 'next/server'
-2025-11-17T09:37:04.709Z    2 | import { getServerSession } from 'next-auth/next'
-2025-11-17T09:37:04.709Z  > 3 | import { authOptions } from '@/lib/auth'
-2025-11-17T09:37:04.709Z      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2025-11-17T09:37:04.709Z    4 | import { prisma } from '@/lib/prisma'
-2025-11-17T09:37:04.709Z    5 | import { PlatformIntegrationService } from '@/lib/services/platformIntegration'
-2025-11-17T09:37:04.710Z    6 | import { SSOAuthService } from '@/lib/services/ssoAuth'
-2025-11-17T09:37:04.710Z  
-2025-11-17T09:37:04.710Z  The export authOptions was not found in module [project]/src/lib/auth.ts [app-route] (ecmascript).
-2025-11-17T09:37:04.710Z  Did you mean to import AuthService?
-2025-11-17T09:37:04.710Z  All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-2025-11-17T09:37:04.710Z  
-2025-11-17T09:37:04.710Z  
-2025-11-17T09:37:04.710Z      at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:88:21)
-2025-11-17T09:37:04.711Z      at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:88:22)
-2025-11-17T09:37:04.711Z      at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:137:21)
-2025-11-17T09:37:04.711Z      at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:137:22)
-2025-11-17T09:37:04.711Z      at <unknown> (./src/app/(main)/applications/history/[applicationId]/page.tsx:13:1)
-2025-11-17T09:37:04.711Z      at <unknown> (https://nextjs.org/docs/messages/module-not-found)
-2025-11-17T09:37:04.711Z      at <unknown> (./src/app/(main)/applications/history/[applicationId]/page.tsx:15:1)
-2025-11-17T09:37:04.711Z      at <unknown> (https://nextjs.org/docs/messages/module-not-found)
-2025-11-17T09:37:04.712Z      at <unknown> (./src/components/features/applications/ApplicationHistoryList.tsx:16:1)
-2025-11-17T09:37:04.712Z      at <unknown> (https://nextjs.org/docs/messages/module-not-found)
-2025-11-17T09:37:04.712Z      at <unknown> (./src/components/features/applications/ApplicationHistoryList.tsx:17:1)
-2025-11-17T09:37:04.712Z      at <unknown> (https://nextjs.org/docs/messages/module-not-found)
-2025-11-17T09:37:04.712Z      at <unknown> (./src/components/features/applications/ApplicationTimeline.tsx:10:1)
-2025-11-17T09:37:04.712Z      at <unknown> (https://nextjs.org/docs/messages/module-not-found)
-2025-11-17T09:37:04.712Z      at <unknown> (./src/components/features/applications/ApplicationTimeline.tsx:11:1)
-2025-11-17T09:37:04.712Z      at <unknown> (https://nextjs.org/docs/messages/module-not-found)
-2025-11-17T09:37:04.713Z      at <unknown> (./src/app/(main)/applications/redirect/[applicationId]/page.tsx:3:1)
-2025-11-17T09:37:04.713Z      at <unknown> (./src/app/api/platform/redirect/route.ts:3:1)
-2025-11-17T09:37:04.816Z  Error: Command "prisma generate && next build" exited with 1
+> Build error occurred
+2025-11-17T09:49:12.340Z  Error: Turbopack build failed with 12 errors:
+2025-11-17T09:49:12.340Z  ./src/app/(main)/applications/receipt/[applicationId]/page.tsx
+2025-11-17T09:49:12.340Z  Error evaluating Node.js code
+2025-11-17T09:49:12.341Z  SyntaxError: /vercel/path0/src/app/(main)/applications/receipt/[applicationId]/page.tsx: Unexpected token (72:32)
+2025-11-17T09:49:12.341Z  
+2025-11-17T09:49:12.341Z    70 |             <Button
+2025-11-17T09:49:12.341Z    71 |               onClick={() => router.push('/applications')}
+2025-11-17T09:49:12.341Z  > 72 |               className="w-full"}
+2025-11-17T09:49:12.342Z       |                                 ^
+2025-11-17T09:49:12.342Z    73 |             >
+2025-11-17T09:49:12.342Z    74 |               返回申请列表
+2025-11-17T09:49:12.342Z    75 |             </Button>
+2025-11-17T09:49:12.342Z      [at constructor (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:137105)]
+2025-11-17T09:49:12.343Z      [at TypeScriptParserMixin.raise (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:194164)]
+2025-11-17T09:49:12.343Z      [at TypeScriptParserMixin.unexpected (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:194550)]
+2025-11-17T09:49:12.343Z      [at TypeScriptParserMixin.jsxParseIdentifier (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:265029)]
+2025-11-17T09:49:12.343Z      [at TypeScriptParserMixin.jsxParseNamespacedName (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:265162)]
+2025-11-17T09:49:12.344Z      [at TypeScriptParserMixin.jsxParseAttribute (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:266868)]
+2025-11-17T09:49:12.344Z      [at TypeScriptParserMixin.jsxParseOpeningElementAfterName (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267291)]
+2025-11-17T09:49:12.344Z      [at TypeScriptParserMixin.jsxParseOpeningElementAfterName (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:335924)]
+2025-11-17T09:49:12.345Z      [at TypeScriptParserMixin.jsxParseOpeningElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267157)]
+2025-11-17T09:49:12.345Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267708)]
+2025-11-17T09:49:12.345Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267915)]
+2025-11-17T09:49:12.345Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267915)]
+2025-11-17T09:49:12.346Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267915)]
+2025-11-17T09:49:12.346Z      [at TypeScriptParserMixin.jsxParseElement (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:268987)]
+2025-11-17T09:49:12.347Z      [at TypeScriptParserMixin.parseExprAtom (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:269115)]
+2025-11-17T09:49:12.347Z      [at TypeScriptParserMixin.parseExprSubscripts (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:356364)]
+2025-11-17T09:49:12.347Z      [at TypeScriptParserMixin.parseUpdate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355963)]
+2025-11-17T09:49:12.348Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355527)]
+2025-11-17T09:49:12.348Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:331837)]
+2025-11-17T09:49:12.348Z      [at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352169)]
+2025-11-17T09:49:12.348Z      [at TypeScriptParserMixin.parseExprOps (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352281)]
+2025-11-17T09:49:12.349Z      [at TypeScriptParserMixin.parseMaybeConditional (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:351760)]
+2025-11-17T09:49:12.349Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350714)]
+2025-11-17T09:49:12.349Z      [at /vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:330420]
+2025-11-17T09:49:12.349Z      [at TypeScriptParserMixin.tryParse (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:199742)]
+2025-11-17T09:49:12.351Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:330400)]
+2025-11-17T09:49:12.351Z      [at /vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350260]
+2025-11-17T09:49:12.351Z      [at TypeScriptParserMixin.allowInAnd (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:383968)]
+2025-11-17T09:49:12.351Z      [at TypeScriptParserMixin.parseMaybeAssignAllowIn (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350239)]
+2025-11-17T09:49:12.351Z      [at TypeScriptParserMixin.parseParenAndDistinguishExpression (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:369230)]
+2025-11-17T09:49:12.352Z      [at TypeScriptParserMixin.parseExprAtom (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:361477)]
+2025-11-17T09:49:12.357Z      [at TypeScriptParserMixin.parseExprAtom (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:269272)]
+2025-11-17T09:49:12.357Z      [at TypeScriptParserMixin.parseExprSubscripts (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:356364)]
+2025-11-17T09:49:12.358Z      [at TypeScriptParserMixin.parseUpdate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355963)]
+2025-11-17T09:49:12.358Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355527)]
+2025-11-17T09:49:12.358Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:331837)]
+2025-11-17T09:49:12.358Z      [at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352169)]
+2025-11-17T09:49:12.358Z      [at TypeScriptParserMixin.parseExprOps (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352281)]
+2025-11-17T09:49:12.358Z      [at TypeScriptParserMixin.parseMaybeConditional (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:351760)]
+2025-11-17T09:49:12.359Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350714)]
+2025-11-17T09:49:12.359Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:330620)]
+2025-11-17T09:49:12.359Z      [at TypeScriptParserMixin.parseExpressionBase (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:349863)]
+2025-11-17T09:49:12.359Z      [at /vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:349774]
+2025-11-17T09:49:12.359Z      [at TypeScriptParserMixin.allowInAnd (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:383926)]
+2025-11-17T09:49:12.359Z      [at TypeScriptParserMixin.parseExpression (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:349753)]
+2025-11-17T09:49:12.359Z      [at TypeScriptParserMixin.parseReturnStatement (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:397586)]
+2025-11-17T09:49:12.360Z      [at TypeScriptParserMixin.parseStatementContent (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:390278)]
+2025-11-17T09:49:12.360Z      [at TypeScriptParserMixin.parseStatementContent (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:324042)]
+2025-11-17T09:49:12.360Z      [at TypeScriptParserMixin.parseStatementLike (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:389494)]
+2025-11-17T09:49:12.360Z      [at TypeScriptParserMixin.parseStatementListItem (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:389120)]
+2025-11-17T09:49:12.360Z  
+2025-11-17T09:49:12.360Z  
+2025-11-17T09:49:12.361Z  ./src/app/(main)/applications/success/[applicationId]/page.tsx
+2025-11-17T09:49:12.361Z  Error evaluating Node.js code
+2025-11-17T09:49:12.361Z  SyntaxError: /vercel/path0/src/app/(main)/applications/success/[applicationId]/page.tsx: Unexpected token (118:32)
+2025-11-17T09:49:12.361Z  
+2025-11-17T09:49:12.361Z    116 |             <Button
+2025-11-17T09:49:12.361Z    117 |               onClick={() => router.push('/applications')}
+2025-11-17T09:49:12.362Z  > 118 |               className="w-full"}
+2025-11-17T09:49:12.362Z        |                                 ^
+2025-11-17T09:49:12.362Z    119 |             >
+2025-11-17T09:49:12.362Z    120 |               返回申请列表
+2025-11-17T09:49:12.362Z    121 |             </Button>
+2025-11-17T09:49:12.362Z      [at constructor (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:137105)]
+2025-11-17T09:49:12.362Z      [at TypeScriptParserMixin.raise (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:194164)]
+2025-11-17T09:49:12.363Z      [at TypeScriptParserMixin.unexpected (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:194550)]
+2025-11-17T09:49:12.363Z      [at TypeScriptParserMixin.jsxParseIdentifier (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:265029)]
+2025-11-17T09:49:12.363Z      [at TypeScriptParserMixin.jsxParseNamespacedName (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:265162)]
+2025-11-17T09:49:12.363Z      [at TypeScriptParserMixin.jsxParseAttribute (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:266868)]
+2025-11-17T09:49:12.363Z      [at TypeScriptParserMixin.jsxParseOpeningElementAfterName (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267291)]
+2025-11-17T09:49:12.364Z      [at TypeScriptParserMixin.jsxParseOpeningElementAfterName (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:335924)]
+2025-11-17T09:49:12.364Z      [at TypeScriptParserMixin.jsxParseOpeningElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267157)]
+2025-11-17T09:49:12.364Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267708)]
+2025-11-17T09:49:12.364Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267915)]
+2025-11-17T09:49:12.364Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267915)]
+2025-11-17T09:49:12.364Z      [at TypeScriptParserMixin.jsxParseElementAt (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:267915)]
+2025-11-17T09:49:12.364Z      [at TypeScriptParserMixin.jsxParseElement (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:268987)]
+2025-11-17T09:49:12.365Z      [at TypeScriptParserMixin.parseExprAtom (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:269115)]
+2025-11-17T09:49:12.365Z      [at TypeScriptParserMixin.parseExprSubscripts (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:356364)]
+2025-11-17T09:49:12.365Z      [at TypeScriptParserMixin.parseUpdate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355963)]
+2025-11-17T09:49:12.365Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355527)]
+2025-11-17T09:49:12.365Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:331837)]
+2025-11-17T09:49:12.365Z      [at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352169)]
+2025-11-17T09:49:12.365Z      [at TypeScriptParserMixin.parseExprOps (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352281)]
+2025-11-17T09:49:12.366Z      [at TypeScriptParserMixin.parseMaybeConditional (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:351760)]
+2025-11-17T09:49:12.366Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350714)]
+2025-11-17T09:49:12.366Z      [at /vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:330420]
+2025-11-17T09:49:12.366Z      [at TypeScriptParserMixin.tryParse (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:199742)]
+2025-11-17T09:49:12.366Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:330400)]
+2025-11-17T09:49:12.366Z      [at /vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350260]
+2025-11-17T09:49:12.366Z      [at TypeScriptParserMixin.allowInAnd (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:383968)]
+2025-11-17T09:49:12.367Z      [at TypeScriptParserMixin.parseMaybeAssignAllowIn (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350239)]
+2025-11-17T09:49:12.367Z      [at TypeScriptParserMixin.parseParenAndDistinguishExpression (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:369230)]
+2025-11-17T09:49:12.367Z      [at TypeScriptParserMixin.parseExprAtom (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:361477)]
+2025-11-17T09:49:12.367Z      [at TypeScriptParserMixin.parseExprAtom (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:269272)]
+2025-11-17T09:49:12.367Z      [at TypeScriptParserMixin.parseExprSubscripts (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:356364)]
+2025-11-17T09:49:12.367Z      [at TypeScriptParserMixin.parseUpdate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355963)]
+2025-11-17T09:49:12.367Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:355527)]
+2025-11-17T09:49:12.368Z      [at TypeScriptParserMixin.parseMaybeUnary (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:331837)]
+2025-11-17T09:49:12.368Z      [at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352169)]
+2025-11-17T09:49:12.368Z      [at TypeScriptParserMixin.parseExprOps (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:352281)]
+2025-11-17T09:49:12.368Z      [at TypeScriptParserMixin.parseMaybeConditional (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:351760)]
+2025-11-17T09:49:12.368Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:350714)]
+2025-11-17T09:49:12.368Z      [at TypeScriptParserMixin.parseMaybeAssign (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:330620)]
+2025-11-17T09:49:12.369Z      [at TypeScriptParserMixin.parseExpressionBase (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:349863)]
+2025-11-17T09:49:12.369Z      [at /vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:349774]
+2025-11-17T09:49:12.369Z      [at TypeScriptParserMixin.allowInAnd (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:383926)]
+2025-11-17T09:49:12.370Z      [at TypeScriptParserMixin.parseExpression (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:349753)]
+2025-11-17T09:49:12.370Z      [at TypeScriptParserMixin.parseReturnStatement (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:397586)]
+2025-11-17T09:49:12.370Z      [at TypeScriptParserMixin.parseStatementContent (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:390278)]
+2025-11-17T09:49:12.370Z      [at TypeScriptParserMixin.parseStatementContent (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:324042)]
+2025-11-17T09:49:12.370Z      [at TypeScriptParserMixin.parseStatementLike (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:389494)]
+2025-11-17T09:49:12.371Z      [at TypeScriptParserMixin.parseStatementListItem (/vercel/path0/node_modules/next/dist/compiled/babel/bundle.js:191:389120)]
+2025-11-17T09:49:12.371Z  
+2025-11-17T09:49:12.371Z  
+2025-11-17T09:49:12.371Z  ./src/app/(main)/applications/receipt/[applicationId]/page.tsx:72:33
+2025-11-17T09:49:12.371Z  Parsing ecmascript source code failed
+2025-11-17T09:49:12.371Z    70 |             <Button
+2025-11-17T09:49:12.372Z    71 |               onClick={() => router.push('/applications')}
+2025-11-17T09:49:12.372Z  > 72 |               className="w-full"}
+2025-11-17T09:49:12.372Z       |                                 ^
+2025-11-17T09:49:12.372Z    73 |             >
+2025-11-17T09:49:12.372Z    74 |               返回申请列表
+2025-11-17T09:49:12.373Z    75 |             </Button>
+2025-11-17T09:49:12.373Z  
+2025-11-17T09:49:12.373Z  Expected '</', got '}'
+2025-11-17T09:49:12.374Z  
+2025-11-17T09:49:12.374Z  
+2025-11-17T09:49:12.374Z  ./src/app/(main)/applications/success/[applicationId]/page.tsx:118:33
+2025-11-17T09:49:12.374Z  Parsing ecmascript source code failed
+2025-11-17T09:49:12.374Z    116 |             <Button
+2025-11-17T09:49:12.374Z    117 |               onClick={() => router.push('/applications')}
+2025-11-17T09:49:12.374Z  > 118 |               className="w-full"}
+2025-11-17T09:49:12.375Z        |                                 ^
+2025-11-17T09:49:12.375Z    119 |             >
+2025-11-17T09:49:12.375Z    120 |               返回申请列表
+2025-11-17T09:49:12.375Z    121 |             </Button>
+2025-11-17T09:49:12.375Z  
+2025-11-17T09:49:12.375Z  Expected '</', got '}'
+2025-11-17T09:49:12.375Z  
+2025-11-17T09:49:12.376Z  
+2025-11-17T09:49:12.376Z  ./src/app/(main)/applications/history/[applicationId]/page.tsx:13:1
+2025-11-17T09:49:12.376Z  Module not found: Can't resolve '@/components/ui/skeleton'
+2025-11-17T09:49:12.376Z    11 | import { Badge } from '@/components/ui/badge';
+2025-11-17T09:49:12.376Z    12 | import { Alert, AlertDescription } from '@/components/ui/alert';
+2025-11-17T09:49:12.376Z  > 13 | import { Skeleton } from '@/components/ui/skeleton';
+2025-11-17T09:49:12.377Z       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-11-17T09:49:12.377Z    14 | import { ApplicationTimeline } from '@/components/features/applications/ApplicationTimeline';
+2025-11-17T09:49:12.377Z    15 | import { trpc } from '@/lib/trpc';
+2025-11-17T09:49:12.378Z    16 | import { ArrowLeft, FileText, User, Building, Calendar, Clock, Mail, Phone, Database, MessageSquare, CheckCircle2, XCircle, Clock3, AlertCircle, Copy, ExternalLink } from 'lucide-react';
+2025-11-17T09:49:12.379Z  
+2025-11-17T09:49:12.379Z  Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
+2025-11-17T09:49:12.379Z  
+2025-11-17T09:49:12.379Z  
+2025-11-17T09:49:12.379Z  Import traces:
+2025-11-17T09:49:12.379Z    Client Component Browser:
+2025-11-17T09:49:12.379Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component Browser]
+2025-11-17T09:49:12.380Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+2025-11-17T09:49:12.380Z  
+2025-11-17T09:49:12.380Z    Client Component SSR:
+2025-11-17T09:49:12.380Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component SSR]
+2025-11-17T09:49:12.381Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+2025-11-17T09:49:12.381Z  
+2025-11-17T09:49:12.381Z  https://nextjs.org/docs/messages/module-not-found
+2025-11-17T09:49:12.381Z  
+2025-11-17T09:49:12.381Z  
+2025-11-17T09:49:12.381Z  ./src/app/(main)/applications/history/[applicationId]/page.tsx:15:1
+2025-11-17T09:49:12.381Z  Module not found: Can't resolve '@/components/ui/skeleton'
+2025-11-17T09:49:12.382Z    13 | import { Separator } from '@/components/ui/separator'
+2025-11-17T09:49:12.382Z    14 | import { Alert, AlertDescription } from '@/components/ui/alert'
+2025-11-17T09:49:12.382Z  > 15 | import { Skeleton } from '@/components/ui/skeleton'
+2025-11-17T09:49:12.382Z       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-11-17T09:49:12.383Z    16 | import { ApplicationTimeline } from '@/components/features/applications/ApplicationTimeline'
+2025-11-17T09:49:12.383Z    17 | import { trpc } from '@/lib/trpc'
+2025-11-17T09:49:12.383Z    18 | import { ApplicationStatus, BusinessPurpose } from '@prisma/client'
+2025-11-17T09:49:12.383Z  
+2025-11-17T09:49:12.383Z  Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
+2025-11-17T09:49:12.384Z  
+2025-11-17T09:49:12.384Z  
+2025-11-17T09:49:12.384Z  Import traces:
+2025-11-17T09:49:12.384Z    Client Component Browser:
+2025-11-17T09:49:12.384Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component Browser]
+2025-11-17T09:49:12.384Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+2025-11-17T09:49:12.384Z  
+2025-11-17T09:49:12.385Z    Client Component SSR:
+2025-11-17T09:49:12.385Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component SSR]
+2025-11-17T09:49:12.385Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+2025-11-17T09:49:12.385Z  
+2025-11-17T09:49:12.385Z  https://nextjs.org/docs/messages/module-not-found
+2025-11-17T09:49:12.385Z  
+2025-11-17T09:49:12.385Z  
+2025-11-17T09:49:12.386Z  ./src/components/features/applications/ApplicationHistoryList.tsx:16:1
+2025-11-17T09:49:12.386Z  Module not found: Can't resolve '@/components/ui/skeleton'
+2025-11-17T09:49:12.386Z    14 | import { Checkbox } from '@/components/ui/checkbox';
+2025-11-17T09:49:12.386Z    15 | import { Progress } from '@/components/ui/progress';
+2025-11-17T09:49:12.386Z  > 16 | import { Skeleton } from '@/components/ui/skeleton';
+2025-11-17T09:49:12.386Z       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-11-17T09:49:12.387Z    17 | import { Alert, AlertDescription } from '@/components/ui/alert';
+2025-11-17T09:49:12.387Z    18 | import { Calendar, User, Building, FileText, Download, CheckCircle2, XCircle, Clock3, FileIcon } from 'lucide-react';
+2025-11-17T09:49:12.387Z    19 | import { format, formatDistanceToNow } from 'date-fns';
+2025-11-17T09:49:12.387Z  
+2025-11-17T09:49:12.387Z  Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
+2025-11-17T09:49:12.388Z  
+2025-11-17T09:49:12.388Z  
+2025-11-17T09:49:12.388Z  Import traces:
+2025-11-17T09:49:12.388Z    Client Component Browser:
+2025-11-17T09:49:12.388Z      ./src/components/features/applications/ApplicationHistoryList.tsx [Client Component Browser]
+2025-11-17T09:49:12.388Z      ./src/app/(main)/applications/history/page.tsx [Client Component Browser]
+2025-11-17T09:49:12.389Z      ./src/app/(main)/applications/history/page.tsx [Server Component]
+2025-11-17T09:49:12.389Z  
+2025-11-17T09:49:12.389Z    Client Component SSR:
+2025-11-17T09:49:12.389Z      ./src/components/features/applications/ApplicationHistoryList.tsx [Client Component SSR]
+2025-11-17T09:49:12.389Z      ./src/app/(main)/applications/history/page.tsx [Client Component SSR]
+2025-11-17T09:49:12.389Z      ./src/app/(main)/applications/history/page.tsx [Server Component]
+2025-11-17T09:49:12.389Z  
+2025-11-17T09:49:12.390Z  https://nextjs.org/docs/messages/module-not-found
+2025-11-17T09:49:12.390Z  
+2025-11-17T09:49:12.390Z  
+2025-11-17T09:49:12.390Z  ./src/components/features/applications/ApplicationHistoryList.tsx:17:1
+2025-11-17T09:49:12.390Z  Module not found: Can't resolve '@/components/ui/skeleton'
+2025-11-17T09:49:12.390Z    15 | import { Checkbox } from '@/components/ui/checkbox'
+2025-11-17T09:49:12.390Z    16 | import { Progress } from '@/components/ui/progress'
+2025-11-17T09:49:12.391Z  > 17 | import { Skeleton } from '@/components/ui/skeleton'
+2025-11-17T09:49:12.391Z       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-11-17T09:49:12.391Z    18 | import { Alert, AlertDescription } from '@/components/ui/alert'
+2025-11-17T09:49:12.391Z    19 | import { Separator } from '@/components/ui/separator'
+2025-11-17T09:49:12.391Z    20 | import { ApplicationStatus, BusinessPurpose } from '@prisma/client'
+2025-11-17T09:49:12.392Z  
+2025-11-17T09:49:12.392Z  Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
+2025-11-17T09:49:12.392Z  
+2025-11-17T09:49:12.392Z  
+2025-11-17T09:49:12.392Z  Import traces:
+2025-11-17T09:49:12.392Z    Client Component Browser:
+2025-11-17T09:49:12.392Z      ./src/components/features/applications/ApplicationHistoryList.tsx [Client Component Browser]
+2025-11-17T09:49:12.393Z      ./src/app/(main)/applications/history/page.tsx [Client Component Browser]
+2025-11-17T09:49:12.393Z      ./src/app/(main)/applications/history/page.tsx [Server Component]
+2025-11-17T09:49:12.393Z  
+2025-11-17T09:49:12.393Z    Client Component SSR:
+2025-11-17T09:49:12.393Z      ./src/components/features/applications/ApplicationHistoryList.tsx [Client Component SSR]
+2025-11-17T09:49:12.393Z      ./src/app/(main)/applications/history/page.tsx [Client Component SSR]
+2025-11-17T09:49:12.393Z      ./src/app/(main)/applications/history/page.tsx [Server Component]
+2025-11-17T09:49:12.394Z  
+2025-11-17T09:49:12.394Z  https://nextjs.org/docs/messages/module-not-found
+2025-11-17T09:49:12.394Z  
+2025-11-17T09:49:12.394Z  
+2025-11-17T09:49:12.394Z  ./src/components/features/applications/ApplicationTimeline.tsx:10:1
+2025-11-17T09:49:12.394Z  Module not found: Can't resolve '@/components/ui/skeleton'
+2025-11-17T09:49:12.394Z     8 | import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+2025-11-17T09:49:12.395Z     9 | import { Badge } from '@/components/ui/badge';
+2025-11-17T09:49:12.395Z  > 10 | import { Skeleton } from '@/components/ui/skeleton';
+2025-11-17T09:49:12.395Z       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-11-17T09:49:12.395Z    11 | import { Alert, AlertDescription } from '@/components/ui/alert';
+2025-11-17T09:49:12.395Z    12 | import { ApplicationStatus } from '@prisma/client';
+2025-11-17T09:49:12.395Z    13 | import { Clock, FileText, Send, Eye, CheckCircle2, XCircle, User, MessageSquare, AlertCircle, Timer } from 'lucide-react';
+2025-11-17T09:49:12.396Z  
+2025-11-17T09:49:12.396Z  Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
+2025-11-17T09:49:12.396Z  
+2025-11-17T09:49:12.396Z  
+2025-11-17T09:49:12.396Z  Import traces:
+2025-11-17T09:49:12.396Z    Client Component Browser:
+2025-11-17T09:49:12.397Z      ./src/components/features/applications/ApplicationTimeline.tsx [Client Component Browser]
+2025-11-17T09:49:12.397Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component Browser]
+2025-11-17T09:49:12.397Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+2025-11-17T09:49:12.397Z  
+2025-11-17T09:49:12.397Z    Client Component SSR:
+2025-11-17T09:49:12.397Z      ./src/components/features/applications/ApplicationTimeline.tsx [Client Component SSR]
+2025-11-17T09:49:12.397Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component SSR]
+2025-11-17T09:49:12.398Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+2025-11-17T09:49:12.399Z  
+2025-11-17T09:49:12.399Z  https://nextjs.org/docs/messages/module-not-found
+2025-11-17T09:49:12.399Z  
+2025-11-17T09:49:12.399Z  
+2025-11-17T09:49:12.399Z  ./src/components/features/applications/ApplicationTimeline.tsx:11:1
+2025-11-17T09:49:12.399Z  Module not found: Can't resolve '@/components/ui/skeleton'
+2025-11-17T09:49:12.400Z     9 | import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+2025-11-17T09:49:12.400Z    10 | import { Badge } from '@/components/ui/badge'
+2025-11-17T09:49:12.400Z  > 11 | import { Skeleton } from '@/components/ui/skeleton'
+2025-11-17T09:49:12.400Z       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-11-17T09:49:12.400Z    12 | import { Alert, AlertDescription } from '@/components/ui/alert'
+2025-11-17T09:49:12.401Z    13 | import { ApplicationStatus, BusinessPurpose } from '@prisma/client'
+2025-11-17T09:49:12.401Z    14 | import {
+2025-11-17T09:49:12.401Z  
+2025-11-17T09:49:12.401Z  Import map: aliased to relative './src/components/ui/skeleton' inside of [project]/
+2025-11-17T09:49:12.401Z  
+2025-11-17T09:49:12.401Z  
+2025-11-17T09:49:12.401Z  Import traces:
+2025-11-17T09:49:12.401Z    Client Component Browser:
+2025-11-17T09:49:12.402Z      ./src/components/features/applications/ApplicationTimeline.tsx [Client Component Browser]
+2025-11-17T09:49:12.402Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component Browser]
+2025-11-17T09:49:12.402Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+2025-11-17T09:49:12.402Z  
+2025-11-17T09:49:12.402Z    Client Component SSR:
+2025-11-17T09:49:12.402Z      ./src/components/features/applications/ApplicationTimeline.tsx [Client Component SSR]
+2025-11-17T09:49:12.402Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Client Component SSR]
+2025-11-17T09:49:12.403Z      ./src/app/(main)/applications/history/[applicationId]/page.tsx [Server Component]
+2025-11-17T09:49:12.403Z  
+2025-11-17T09:49:12.403Z  https://nextjs.org/docs/messages/module-not-found
+2025-11-17T09:49:12.403Z  
+2025-11-17T09:49:12.403Z  
+2025-11-17T09:49:12.403Z  ./src/app/(main)/applications/redirect/[applicationId]/page.tsx:3:1
+2025-11-17T09:49:12.403Z  Export authOptions doesn't exist in target module
+2025-11-17T09:49:12.404Z    1 | import { redirect } from 'next/navigation'
+2025-11-17T09:49:12.404Z    2 | import { getServerSession } from 'next-auth/next'
+2025-11-17T09:49:12.404Z  > 3 | import { authOptions } from '@/lib/auth'
+2025-11-17T09:49:12.404Z      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-11-17T09:49:12.405Z    4 | import { prisma } from '@/lib/prisma'
+2025-11-17T09:49:12.405Z    5 | import { PlatformIntegrationService } from '@/lib/services/platformIntegration'
+2025-11-17T09:49:12.405Z    6 | import { PlatformRedirect } from '@/components/ui/application/PlatformRedirect'
+2025-11-17T09:49:12.405Z  
+2025-11-17T09:49:12.405Z  The export authOptions was not found in module [project]/src/lib/auth.ts [app-rsc] (ecmascript).
+2025-11-17T09:49:12.405Z  Did you mean to import AuthService?
+2025-11-17T09:49:12.406Z  All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+2025-11-17T09:49:12.406Z  
+2025-11-17T09:49:12.406Z  
+2025-11-17T09:49:12.406Z  ./src/app/api/platform/redirect/route.ts:3:1
+2025-11-17T09:49:12.406Z  Export authOptions doesn't exist in target module
+2025-11-17T09:49:12.406Z    1 | import { NextRequest, NextResponse } from 'next/server'
+2025-11-17T09:49:12.406Z    2 | import { getServerSession } from 'next-auth/next'
+2025-11-17T09:49:12.407Z  > 3 | import { authOptions } from '@/lib/auth'
+2025-11-17T09:49:12.407Z      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-11-17T09:49:12.407Z    4 | import { prisma } from '@/lib/prisma'
+2025-11-17T09:49:12.407Z    5 | import { PlatformIntegrationService } from '@/lib/services/platformIntegration'
+2025-11-17T09:49:12.407Z    6 | import { SSOAuthService } from '@/lib/services/ssoAuth'
+2025-11-17T09:49:12.407Z  
+2025-11-17T09:49:12.407Z  The export authOptions was not found in module [project]/src/lib/auth.ts [app-route] (ecmascript).
+2025-11-17T09:49:12.408Z  Did you mean to import AuthService?
+2025-11-17T09:49:12.408Z  All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+2025-11-17T09:49:12.408Z  
+2025-11-17T09:49:12.408Z  
+2025-11-17T09:49:12.408Z      at <unknown> (./src/app/(main)/applications/receipt/[applicationId]/page.tsx:72:33)
+2025-11-17T09:49:12.408Z      at <unknown> (./src/app/(main)/applications/success/[applicationId]/page.tsx:118:33)
+2025-11-17T09:49:12.408Z      at <unknown> (./src/app/(main)/applications/history/[applicationId]/page.tsx:13:1)
+2025-11-17T09:49:12.409Z      at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+2025-11-17T09:49:12.409Z      at <unknown> (./src/app/(main)/applications/history/[applicationId]/page.tsx:15:1)
+2025-11-17T09:49:12.409Z      at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+2025-11-17T09:49:12.409Z      at <unknown> (./src/components/features/applications/ApplicationHistoryList.tsx:16:1)
+2025-11-17T09:49:12.409Z      at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+2025-11-17T09:49:12.409Z      at <unknown> (./src/components/features/applications/ApplicationHistoryList.tsx:17:1)
+2025-11-17T09:49:12.409Z      at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+2025-11-17T09:49:12.410Z      at <unknown> (./src/components/features/applications/ApplicationTimeline.tsx:10:1)
+2025-11-17T09:49:12.410Z      at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+2025-11-17T09:49:12.410Z      at <unknown> (./src/components/features/applications/ApplicationTimeline.tsx:11:1)
+2025-11-17T09:49:12.410Z      at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+2025-11-17T09:49:12.410Z      at <unknown> (./src/app/(main)/applications/redirect/[applicationId]/page.tsx:3:1)
+2025-11-17T09:49:12.410Z      at <unknown> (./src/app/api/platform/redirect/route.ts:3:1)
+2025-11-17T09:49:12.485Z  Error: Command "prisma generate && next build" exited with 1

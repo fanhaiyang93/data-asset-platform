@@ -8,7 +8,7 @@
 import React, { useMemo } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Skeleton } from '@/components/ui/skeleton'
+import { Skeleton } from '@/components/ui/Skeleton'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { ApplicationStatus, BusinessPurpose } from '@prisma/client'
 import {

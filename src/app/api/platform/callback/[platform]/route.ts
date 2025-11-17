@@ -4,23 +4,25 @@ import { SSOAuthService } from '@/lib/services/ssoAuth'
 import { RedirectLoggerService } from '@/lib/services/redirectLogger'
 import { prisma } from '@/lib/prisma'
 
-interface CallbackParams {
-  params: {
+interface CallbackContext {
+  params: Promise<{
     platform: string
-  }
+  }>
 }
 
 export async function GET(
   request: NextRequest,
-  { params }: CallbackParams
+  context: CallbackContext
 ) {
+  const params = await context.params
   return handleCallback(request, params.platform, 'GET')
 }
 
 export async function POST(
   request: NextRequest,
-  { params }: CallbackParams
+  context: CallbackContext
 ) {
+  const params = await context.params
   return handleCallback(request, params.platform, 'POST')
 }
 
@@ -30,7 +32,6 @@ async function handleCallback(
   method: 'GET' | 'POST'
 ) {
   try {
-    const params = await context.params
 
     const { searchParams } = new URL(request.url)
 

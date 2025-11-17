@@ -47,10 +47,10 @@ function ApplicationReceiptContent({ applicationId }: ApplicationReceiptProps) {
 
   if (loading) {
     return (
-      <div className=\"min-h-screen bg-gray-50 flex items-center justify-center\">
-        <div className=\"text-center\">
-          <div className=\"animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4\"></div>
-          <p className=\"text-gray-600\">正在加载申请凭证...</p>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">正在加载申请凭证...</p>
         </div>
       </div>
     )
@@ -58,18 +58,18 @@ function ApplicationReceiptContent({ applicationId }: ApplicationReceiptProps) {
 
   if (error || !application) {
     return (
-      <div className=\"min-h-screen bg-gray-50 flex items-center justify-center\">
-        <Card className=\"w-full max-w-md\">
-          <CardHeader className=\"text-center\">
-            <CardTitle className=\"text-red-600\">获取申请凭证失败</CardTitle>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <Card className="w-full max-w-md">
+          <CardHeader className="text-center">
+            <CardTitle className="text-red-600">获取申请凭证失败</CardTitle>
             <CardDescription>
               {error || '未找到指定的申请信息'}
             </CardDescription>
           </CardHeader>
-          <CardContent className=\"text-center\">
+          <CardContent className="text-center">
             <Button
               onClick={() => router.push('/applications')}
-              className=\"w-full\"
+              className="w-full\"
             >
               返回申请列表
             </Button>
@@ -80,16 +80,16 @@ function ApplicationReceiptContent({ applicationId }: ApplicationReceiptProps) {
   }
 
   return (
-    <div className=\"min-h-screen bg-gray-50 py-8\">
-      <div className=\"max-w-6xl mx-auto px-4 sm:px-6 lg:px-8\">
+    <div className="min-h-screen bg-gray-50 py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 返回按钮 */}
-        <div className=\"mb-6 no-print\">
+        <div className="mb-6 no-print">
           <Button
             variant=\"ghost\"
             onClick={() => router.back()}
-            className=\"flex items-center gap-2 text-gray-600 hover:text-gray-900\"
+            className="flex items-center gap-2 text-gray-600 hover:text-gray-900\"
           >
-            <ArrowLeftIcon className=\"h-4 w-4\" />
+            <ArrowLeftIcon className="h-4 w-4\" />
             返回
           </Button>
         </div>
@@ -98,8 +98,8 @@ function ApplicationReceiptContent({ applicationId }: ApplicationReceiptProps) {
         <ApplicationReceipt application={application} />
 
         {/* 页面底部操作区域 */}
-        <div className=\"mt-8 text-center no-print\">
-          <div className=\"flex justify-center gap-4\">
+        <div className="mt-8 text-center no-print">
+          <div className="flex justify-center gap-4">
             <Button
               variant=\"outline\"
               onClick={() => router.push('/applications')}
@@ -114,12 +114,12 @@ function ApplicationReceiptContent({ applicationId }: ApplicationReceiptProps) {
           </div>
 
           {/* 帮助信息 */}
-          <div className=\"mt-6 p-4 bg-blue-50 rounded-lg max-w-2xl mx-auto\">
-            <h4 className=\"font-medium text-blue-900 mb-2\">关于申请凭证</h4>
-            <p className=\"text-blue-700 text-sm leading-relaxed\">
+          <div className="mt-6 p-4 bg-blue-50 rounded-lg max-w-2xl mx-auto">
+            <h4 className="font-medium text-blue-900 mb-2">关于申请凭证</h4>
+            <p className="text-blue-700 text-sm leading-relaxed">
               本凭证包含您的完整申请信息，可用于查询申请状态、联系客服或作为申请记录保存。
               凭证具有唯一性，请妥善保管。如有疑问，请联系我们：
-              <a href=\"mailto:support@example.com\" className=\"underline ml-1\">
+              <a href=\"mailto:support@example.com\" className="underline ml-1">
                 support@example.com
               </a>
             </p>
@@ -136,13 +136,13 @@ export default function ApplicationReceiptPage() {
 
   if (!applicationId) {
     return (
-      <div className=\"min-h-screen bg-gray-50 flex items-center justify-center\">
-        <Card className=\"w-full max-w-md\">
-          <CardHeader className=\"text-center\">
-            <CardTitle className=\"text-red-600\">参数错误</CardTitle>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <Card className="w-full max-w-md">
+          <CardHeader className="text-center">
+            <CardTitle className="text-red-600">参数错误</CardTitle>
             <CardDescription>申请ID不能为空</CardDescription>
           </CardHeader>
-          <CardContent className=\"text-center\">
+          <CardContent className="text-center">
             <Button onClick={() => window.history.back()}>
               返回
             </Button>

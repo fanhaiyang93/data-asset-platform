@@ -115,7 +115,7 @@ function ApplicationSuccessContent({ applicationId }: ApplicationSuccessProps) {
           <CardContent className="text-center">
             <Button
               onClick={() => router.push('/applications')}
-              className="w-full\"
+              className="w-full"}
             >
               返回申请列表
             </Button>
@@ -134,11 +134,11 @@ function ApplicationSuccessContent({ applicationId }: ApplicationSuccessProps) {
         {/* 返回按钮 */}
         <div className="mb-6">
           <Button
-            variant=\"ghost\"
+            variant="ghost"}
             onClick={() => router.back()}
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900\"
+            className="flex items-center gap-2 text-gray-600 hover:text-gray-900"}
           >
-            <ArrowLeftIcon className="h-4 w-4\" />
+            <ArrowLeftIcon className="h-4 w-4" />
             返回
           </Button>
         </div>
@@ -146,7 +146,7 @@ function ApplicationSuccessContent({ applicationId }: ApplicationSuccessProps) {
         {/* 成功提示 */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-            <CheckCircleIcon className="h-8 w-8 text-green-500\" />
+            <CheckCircleIcon className="h-8 w-8 text-green-500" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">申请提交成功！</h1>
           <p className="text-lg text-gray-600">
@@ -163,7 +163,7 @@ function ApplicationSuccessContent({ applicationId }: ApplicationSuccessProps) {
                 <CardDescription>申请编号：{application.applicationNumber}</CardDescription>
               </div>
               <Badge className={statusInfo.color}>
-                <StatusIcon className="h-4 w-4 mr-1\" />
+                <StatusIcon className="h-4 w-4 mr-1" />
                 {statusInfo.label}
               </Badge>
             </div>
@@ -213,7 +213,7 @@ function ApplicationSuccessContent({ applicationId }: ApplicationSuccessProps) {
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="font-semibold text-gray-900">{application.asset.name}</h4>
-                  <Badge variant=\"outline">{application.asset.category.name}</Badge>
+                  <Badge variant="outline">{application.asset.category.name}</Badge>
                 </div>
                 {application.asset.description && (
                   <p className="text-gray-600 text-sm">{application.asset.description}</p>
@@ -312,14 +312,14 @@ function ApplicationSuccessContent({ applicationId }: ApplicationSuccessProps) {
             <div className="flex gap-4 mt-6">
               <Button
                 onClick={() => router.push('/applications')}
-                className="flex-1\"
+                className="flex-1"}
               >
                 查看我的申请
               </Button>
               <Button
-                variant=\"outline\"
+                variant="outline"}
                 onClick={() => router.push('/applications/receipt/' + application.applicationNumber)}
-                className="flex-1\"
+                className="flex-1"}
               >
                 查看申请凭证
               </Button>
@@ -330,7 +330,7 @@ function ApplicationSuccessContent({ applicationId }: ApplicationSuccessProps) {
               <h4 className="font-medium text-blue-900 mb-2">需要帮助？</h4>
               <p className="text-blue-700 text-sm">
                 如有疑问，请联系我们：
-                <a href=\"mailto:support@example.com\" className="underline ml-1">
+                <a href="mailto:support@example.com"} className="underline ml-1">
                   support@example.com
                 </a>
               </p>

@@ -69,7 +69,7 @@ function ApplicationReceiptContent({ applicationId }: ApplicationReceiptProps) {
           <CardContent className="text-center">
             <Button
               onClick={() => router.push('/applications')}
-              className="w-full\"
+              className="w-full"}
             >
               返回申请列表
             </Button>
@@ -85,11 +85,11 @@ function ApplicationReceiptContent({ applicationId }: ApplicationReceiptProps) {
         {/* 返回按钮 */}
         <div className="mb-6 no-print">
           <Button
-            variant=\"ghost\"
+            variant="ghost"}
             onClick={() => router.back()}
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900\"
+            className="flex items-center gap-2 text-gray-600 hover:text-gray-900"}
           >
-            <ArrowLeftIcon className="h-4 w-4\" />
+            <ArrowLeftIcon className="h-4 w-4" />
             返回
           </Button>
         </div>
@@ -101,7 +101,7 @@ function ApplicationReceiptContent({ applicationId }: ApplicationReceiptProps) {
         <div className="mt-8 text-center no-print">
           <div className="flex justify-center gap-4">
             <Button
-              variant=\"outline\"
+              variant="outline"}
               onClick={() => router.push('/applications')}
             >
               查看我的申请
@@ -119,7 +119,7 @@ function ApplicationReceiptContent({ applicationId }: ApplicationReceiptProps) {
             <p className="text-blue-700 text-sm leading-relaxed">
               本凭证包含您的完整申请信息，可用于查询申请状态、联系客服或作为申请记录保存。
               凭证具有唯一性，请妥善保管。如有疑问，请联系我们：
-              <a href=\"mailto:support@example.com\" className="underline ml-1">
+              <a href="mailto:support@example.com"} className="underline ml-1">
                 support@example.com
               </a>
             </p>

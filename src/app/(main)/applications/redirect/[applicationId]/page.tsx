@@ -6,16 +6,17 @@ import { PlatformRedirect } from '@/components/ui/application/PlatformRedirect'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     applicationId: string
-  }
+  }>
   searchParams: {
     platform?: string
     mode?: 'new_window' | 'current_window' | 'iframe'
   }
 }
 
-export default async function RedirectPage({ params, searchParams }: PageProps) {
+export default async function RedirectPage({ params: paramsPromise, searchParams }: PageProps) {
+  const params = await paramsPromise
   const session = await getSession()
 
   if (!session?.user) {

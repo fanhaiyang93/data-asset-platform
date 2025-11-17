@@ -1,6 +1,5 @@
 import { redirect } from 'next/navigation'
-import { getServerSession } from 'next-auth/next'
-import { authOptions } from '@/lib/auth'
+import { getSession } from '@/lib/session'
 import { prisma } from '@/lib/prisma'
 import { PlatformIntegrationService } from '@/lib/services/platformIntegration'
 import { PlatformRedirect } from '@/components/ui/application/PlatformRedirect'
@@ -17,7 +16,7 @@ interface PageProps {
 }
 
 export default async function RedirectPage({ params, searchParams }: PageProps) {
-  const session = await getServerSession(authOptions)
+  const session = await getSession()
 
   if (!session?.user) {
     redirect('/auth/signin')

@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getServerSession } from 'next-auth/next'
-import { authOptions } from '@/lib/auth'
+import { getSession } from '@/lib/session'
 import { prisma } from '@/lib/prisma'
 import { PlatformIntegrationService } from '@/lib/services/platformIntegration'
 import { SSOAuthService } from '@/lib/services/ssoAuth'
@@ -8,7 +7,7 @@ import { RedirectLoggerService } from '@/lib/services/redirectLogger'
 
 export async function POST(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions)
+    const session = await getSession()
 
     if (!session?.user) {
       return NextResponse.json(
@@ -158,7 +157,7 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions)
+    const session = await getSession()
 
     if (!session?.user) {
       return NextResponse.json(
